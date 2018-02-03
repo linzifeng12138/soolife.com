@@ -9,76 +9,8 @@
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-    <div id="topnav">
-        <div class="container">
-            <span class="username">Hi, 欢迎来到如此生活</span>
-            <a href="#" class="loginhere">登录</a>
-            <a href="#" class="reghere">免费注册</a>
-            <a href="#" class="wx smalllogo"></a>
-            <a href="#" class="wb smalllogo"></a>
-            <ul class="topnav_right">
-                <li><a href="#">我的生活</a><i></i></li>
-                <li><a href="#">商家入驻</a></li>
-                <li><a href="#">帮助中心</a><i></i></li>
-                <li><a href="#">更多导航</a><i></i></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="mainnav">
-        <div class="container">
-            <h1>如此生活盗版电商网</h1>
-            <div class="searchbox">
-                 <span><a href="#">商品</a></span>
-                 <span><a href="#">店铺</a></span>
-                 <input type="text" placeholder="坏孩子"/>
-                 <a href="#" class="searchbtn">搜索</a>
-                 <ul>
-                     <li><a href="#">山茶油</a></li>
-                     <li><a href="#">iPhone X</a></li>
-                     <li><a href="#">COACH</a></li>
-                     <li><a href="#">韩都衣舍</a></li>
-                     <li><a href="#">appach不倒杯</a></li>
-                     <li><a href="#">清风</a></li>
-                     <li><a href="#">洁癖</a></li>
-                     <li><a href="#">LEE</a></li>
-                 </ul>
-            </div>
-            <div class="tel">
-                <i></i>
-                <span>400-068-515</span>
-                <span>021-3456778</span>
-                <p>服务热线|周一到周日 9:00--24:00</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="catelist">
-        <div class="container">
-            <h3>全部产品分类</h3>
-            <ul class="tablist1">
-                <li> <a href="#">女装|男装|内衣|鞋靴</a></li>
-                <li><a href="#">箱包|皮具|钟表饰品</a></li>
-                <li><a href="#">户外运动</a></li>
-                <li><a href="#">化妆品|个人护理|洗护</a></li>
-                <li><a href="#">家居家纺|家装建材</a></li>
-                <li><a href="#">汽车用品</a></li>
-                <li><a href="#">日用厨具|收纳|宠物</a></li>
-                <li><a href="#">母婴|玩具|童装</a></li>
-                <li><a href="#">食品|饮料|酒类|生鲜</a></li>
-                <li><a href="#">手机|数码|电脑办公</a></li> 
-                <li><a href="#">大家电|小家电|生活电器</a></li>               
-            </ul> 
-            
-            <ul class="tablist2">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">海外精品</a></li>
-                <li><a href="#">星范儿</a></li>
-                <li><a href="#">星特惠</a></li>
-                <li><a href="#">星粉特区</a></li>
-            </ul>
-        </div>
-    </div>
+    <!-- 利用jQuery的load方法加载公共的头部内容，记得要用localhost:1992打开才能看见哦 -->
+    <header id="pageHeader"></header>
 
     <div id="banner">
         <img src="img/ban2.jpg" alt="" />
@@ -152,7 +84,8 @@
             </div>       
         </div>    
     </div>
-
+    
+    <!-- 利用$.ajax()生成数据开始 -->
     <div id="clothes">
         <div class="container">
             <h3 class="title0">1F  服饰鞋帽</h3>

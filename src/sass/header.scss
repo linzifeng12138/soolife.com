@@ -1,0 +1,72 @@
+// 定义全局颜色
+$maincolor: rgb(55,160,219) !global;
+$pink: rgb(255,63,114) !global;
+
+#topnav{width:100%;height:30px;background: rgb(245,245,245);}
+#topnav .username{display:inline-block;width:118px;height:30px;
+    font-size:12px;line-height:30px;}
+#topnav .loginhere , #topnav .reghere{padding-right:7px;
+    padding-left:3px;color:$maincolor;font-size:12px;
+    border-right:1px solid #ccc;}
+
+#topnav .smalllogo{display:inline-block;width:21px;height:27px;background: url("../img/lzfwww.png") no-repeat;
+    background-position:-196px 0px;vertical-align:top;}
+#topnav .wb{background-position:-232px 0px;}
+
+#topnav .topnav_right{float:right;font-size:12px;
+    text-align:center;padding-top:7px;}
+#topnav .topnav_right li{float:left;padding-left:5px;
+    padding-right:5px;position:relative;}
+#topnav .topnav_right li:not(:nth-child(2)){padding-right:15px;}
+#topnav .topnav_right li:not(:last-child){
+    border-right:1px solid #ccc;}
+#topnav .topnav_right li a{color:$maincolor;}
+#topnav .topnav_right li:not(:nth-child(2)) i{display:block;position:absolute;right:3px;top:-7px;
+    width:11px;height:28px;
+    background: url("../img/lzfwww.png") no-repeat;
+    background-position:-337px 0px;}
+
+
+#mainnav{width:100%;height:100px;position:relative;background: white;}
+#mainnav h1{float:left;text-indent:-1234px;background:url("../img/lzfwww.png") no-repeat;position:absolute;left:30px;top:20px;width:186px;height:65px;}
+#mainnav .searchbox{float:left;margin-left:280px;width:620px;height:100px;padding-top:8px;position:relative;}
+#mainnav span a{display:inline-block;width:45px;height:22px;background:rgb(246,171,0);text-align:center;font-size:12px;line-height:22px;border-radius:3px;color:white;}
+#mainnav span:nth-child(2) a{background:$maincolor;margin-right:400px;}
+#mainnav span:nth-child(1) a{margin-left:17px;}
+
+#mainnav input{margin-left:17px;margin-top:2px;width:510px;height:35px;border:3px solid $maincolor;padding-left:12px;}
+#mainnav .searchbtn{display:inline-block;width:85px;height:35px;background: $maincolor;line-height:35px;text-align:center;vertical-align:middle;position:absolute;right:8px;top:33px;
+color:white;}
+
+#mainnav ul{font-size:12px;margin-top:4px;}
+#mainnav ul li{float:left;padding-left:16px;padding-right:13px;}
+#mainnav ul li a{color:$maincolor;}
+#mainnav ul li:not(:last-child){border-right:1px solid $maincolor;}
+
+#mainnav .tel{float:right;margin-top:13px;width:205px;height:75px;}
+#mainnav .tel i{display:inline-block;float:left;width:56px;height:48px;background: url('../img/lzfwww.png') no-repeat;
+    background-position:-268px 0px;}
+#mainnav .tel span{float:right;display:block;width:145px;height:23px;font-size:20px;color:$maincolor;}
+#mainnav .tel p{float:left;width:205px;height:20px;line-height:20px;font-size:13px;color:$maincolor;margin-top:3px;margin-left:3px;}
+
+
+#catelist{width:100%;height:38px;background: white;border-bottom:3px solid $pink;}
+
+#catelist h3{float:left;width:241px;height:38px;background:$pink;box-shadow:2px 0px 3px #ccc;line-height:38px;font-size:18px;color:white;padding-left:43px;cursor:pointer;}
+
+#catelist .tablist1{display:none;
+    position:absolute;left:33px;top:168px;width:240px;height:480px;box-shadow:2px 2px 3px #ccc;background:rgb(255,90,133);z-index:233;}
+
+#catelist .tablist1 li{width:240px;height:40px;line-height:40px;font-size:14px;}
+#catelist .tablist1 li a{display:block;width:190px;margin-left:23px;height:40px;padding-left:12px;border-bottom:2px dotted white;color:white;}
+#catelist .tablist1 li:hover{background: white;}
+#catelist .tablist1 li:hover a{color:black;}
+
+
+#catelist .tablist2 li{float:left;}
+#catelist .tablist2 li a{text-align:center;padding-left:40px;padding-right:40px;line-height:38px;}
+#catelist .tablist2 li:hover a{color:$pink;}
+
+#footer{width:100%;}
+#footer .container{height:376px;background:url("../img/footer.png") no-repeat;}
+/*顶部公共样式结束*/
