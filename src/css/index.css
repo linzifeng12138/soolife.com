@@ -1,13 +1,13 @@
 @charset "UTF-8";
 #banner {
-  width: 1260px;
+  width: 1250px;
   height: 480px;
   position: relative;
   overflow: hidden;
 }
 
 #banner ul {
-  width: 8000px;
+  width: 18000px;
   height: 480px;
   position: absolute;
   left: 0px;
@@ -19,7 +19,7 @@
 }
 
 #banner ul li img {
-  width: 1270px;
+  width: 1260px;
   height: 480px;
 }
 

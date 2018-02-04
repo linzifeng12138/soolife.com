@@ -17,8 +17,9 @@ jQuery(function($){
     });
     //首页轮播图代码：
     $('#banner').lzfbanner({
-        imgs:['img/ban1.jpg','img/ban2.jpg','img/ban3.jpg','img/ban4.jpg','img/ban5.png'],
+        imgs:['img/ban2.jpg','img/ban3.jpg','img/ban4.jpg','img/ban5.png','img/ban6.png','img/ban8.png','img/ban7.jpg'],
         buttons:false,
         index:2
     });
+
 });
