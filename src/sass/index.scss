@@ -2,8 +2,11 @@
 $maincolor: rgb(55,160,219) !global;
 $pink: rgb(255,63,114) !global;
 
-#banner{width:100%;height:480px;position:relative;overflow:hidden;}
-#banner img{width:1800px;;height:480px;position:absolute;left:-240px;top:0px;}
+
+#banner{width:1260px;height:480px;position:relative;overflow:hidden;}
+#banner ul{width:8000px;height:480px;position:absolute;left:0px;top:0px;}
+#banner ul li{float:left;}
+#banner ul li img{width:1270px;;height:480px;}
 
 /*轮播图框架样式结束*/
 
@@ -117,7 +120,8 @@ $pink: rgb(255,63,114) !global;
 
 /*7f*/
 .right_box_sty5{width:880px;height:500px;}
-.right_box_sty5 li{position:relative;overflow:hidden;float:left;
+.right_box_sty5 li{position:relative;overflow:hidden;
+    float:left;
     border-right:1px solid #efefef;border-bottom:1px solid #efefef;}
 
 .right_box_sty5 li:nth-child(1){width:440px;height:250px;}

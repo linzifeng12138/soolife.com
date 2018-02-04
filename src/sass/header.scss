@@ -49,12 +49,11 @@ color:white;}
 #mainnav .tel span{float:right;display:block;width:145px;height:23px;font-size:20px;color:$maincolor;}
 #mainnav .tel p{float:left;width:205px;height:20px;line-height:20px;font-size:13px;color:$maincolor;margin-top:3px;margin-left:3px;}
 
-
 #catelist{width:100%;height:38px;background: white;border-bottom:3px solid $pink;}
 
 #catelist h3{float:left;width:241px;height:38px;background:$pink;box-shadow:2px 0px 3px #ccc;line-height:38px;font-size:18px;color:white;padding-left:43px;cursor:pointer;}
 
-#catelist .tablist1{display:none;
+#catelist .tablist1{
     position:absolute;left:33px;top:168px;width:240px;height:480px;box-shadow:2px 2px 3px #ccc;background:rgb(255,90,133);z-index:233;}
 
 #catelist .tablist1 li{width:240px;height:40px;line-height:40px;font-size:14px;}
@@ -66,6 +65,7 @@ color:white;}
 #catelist .tablist2 li{float:left;}
 #catelist .tablist2 li a{text-align:center;padding-left:40px;padding-right:40px;line-height:38px;}
 #catelist .tablist2 li:hover a{color:$pink;}
+
 
 #footer{width:100%;}
 #footer .container{height:376px;background:url("../img/footer.png") no-repeat;}

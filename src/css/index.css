@@ -1,17 +1,26 @@
 @charset "UTF-8";
 #banner {
-  width: 100%;
+  width: 1260px;
   height: 480px;
   position: relative;
   overflow: hidden;
 }
 
-#banner img {
-  width: 1800px;
+#banner ul {
+  width: 8000px;
   height: 480px;
   position: absolute;
-  left: -240px;
+  left: 0px;
   top: 0px;
+}
+
+#banner ul li {
+  float: left;
+}
+
+#banner ul li img {
+  width: 1270px;
+  height: 480px;
 }
 
 /*轮播图框架样式结束*/
