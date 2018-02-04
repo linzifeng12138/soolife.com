@@ -4,7 +4,7 @@
 		//2、设置默认值
 		var defaults = {
 			//轮播图的容器的宽高，注意：图片的宽高请到css文件里面修改，两者需要一致
-			width:1260,
+			width:1250,
 			height:480,
 			index:0,//索引值
 			page:true,//页码

@@ -1,4 +1,76 @@
 @charset "UTF-8";
+#catelist {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  background: white;
+  border-bottom: 3px solid #ff3f72;
+}
+
+#catelist h3 {
+  float: left;
+  width: 241px;
+  height: 38px;
+  background: #ff3f72;
+  box-shadow: 2px 0px 3px #ccc;
+  line-height: 38px;
+  font-size: 18px;
+  color: white;
+  padding-left: 43px;
+  cursor: pointer;
+}
+
+#catelist .tablist1 {
+  position: absolute;
+  left: 33px;
+  top: 38px;
+  width: 240px;
+  height: 480px;
+  box-shadow: 2px 2px 3px #ccc;
+  background: #ff5a85;
+  z-index: 133;
+}
+
+#catelist .tablist1 li {
+  width: 240px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+#catelist .tablist1 li a {
+  display: block;
+  width: 190px;
+  margin-left: 23px;
+  height: 40px;
+  padding-left: 12px;
+  border-bottom: 2px dotted white;
+  color: white;
+}
+
+#catelist .tablist1 li:hover {
+  background: white;
+}
+
+#catelist .tablist1 li:hover a {
+  color: black;
+}
+
+#catelist .tablist2 li {
+  float: left;
+}
+
+#catelist .tablist2 li a {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 38px;
+}
+
+#catelist .tablist2 li:hover a {
+  color: #ff3f72;
+}
+
 #banner {
   width: 1250px;
   height: 480px;
@@ -19,7 +91,7 @@
 }
 
 #banner ul li img {
-  width: 1260px;
+  width: 1250px;
   height: 480px;
 }
 

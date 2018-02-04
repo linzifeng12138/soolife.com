@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品列表 | 如此生活</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/list.css" />
+
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/list.js"></script>
+</head>
+<body>
+    <!-- 利用jQuery的load方法加载公共的头部内容，记得要用localhost:1992打开才能看见哦 -->
+    <header id="pageHeader"></header>
+    
+    <div id="catelist">
+        <div class="container">
+            <h3>全部产品分类</h3>
+            <ul class="tablist1">
+                <li> <a href="#">女装|男装|内衣|鞋靴</a></li>
+                <li><a href="#">箱包|皮具|钟表饰品</a></li>
+                <li><a href="#">户外运动</a></li>
+                <li><a href="#">化妆品|个人护理|洗护</a></li>
+                <li><a href="#">家居家纺|家装建材</a></li>
+                <li><a href="#">汽车用品</a></li>
+                <li><a href="#">日用厨具|收纳|宠物</a></li>
+                <li><a href="#">母婴|玩具|童装</a></li>
+                <li><a href="#">食品|饮料|酒类|生鲜</a></li>
+                <li><a href="#">手机|数码|电脑办公</a></li> 
+                <li><a href="#">大家电|小家电|生活电器</a></li>               
+            </ul> 
+            
+            <ul class="tablist2">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">海外精品</a></li>
+                <li><a href="#">星范儿</a></li>
+                <li><a href="#">星特惠</a></li>
+                <li><a href="#">星粉特区</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="nav_list">
+        <div class="container">
+            <div class="brand">
+                <h4 class="title0">品牌：</h4>   
+                <div class="box_size0 brandbox">
+                    <a href="#"><img src="../img/lg1.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg2.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg3.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg4.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg5.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg6.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg7.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg8.jpg" height="80" width="138" alt="" /></a>
+                    <a href="#"><img src="../img/lg9.jpg" height="80" width="138" alt="" /></a>
+                </div>         
+            </div>
+
+            <div class="shopname">
+                <h4 class="title0">店铺：</h4>   
+                <div class="box_size0 shopname_box">
+                    <a href="#">上海壹万</a>
+                    <a href="#">韩都衣舍</a>
+                    <a href="#">素梅良</a>
+                    <a href="#">格林国际</a>
+                    <a href="#">易顺</a>
+                    <a href="#">开合</a>
+                    <a href="#">罗曼欧尼</a>
+                    <a href="#">安顺</a>
+                    <a href="#">t-house</a>
+                </div>      
+            </div>
+
+            <div class="price_area">
+                <h4 class="title0">价格：</h4>   
+                <div class="box_size0 price_box">
+                    <a href="#">0-500元</a>
+                    <a href="#">500-1000元</a>
+                    <a href="#">1000-3000元</a>
+                    <a href="#">3000-5000元</a>
+                    <a href="#">5000元以上</a>
+                </div>      
+            </div>
+        </div>
+    </div>
+
+    <div id="maingoods_list">
+        <div class="container">
+            <div class="option_list">
+                <span>排序：</span>
+                <a href="#">默认</a>
+                <a href="#">价格<i></i></a>
+                <a href="#">销量<i></i></a>
+                <a href="#">人气<i></i></a>
+                <a href="#">上架时间<i></i></a>
+                <div class="pagehere fr">
+                    <p>共<span class="total_num">123</span>个产品</p>
+                    <p><span class="single_page">1</span>/<span class="all_page">10</span>页</p>
+                </div>
+            </div>
+
+            <!-- 数据生成区域 -->
+            <div class="goodsdatalist">
+                 <ul>
+                     <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                     <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                     <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                     <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                      <li data-guid="001">
+                        <a href="#">
+                            <img src="../img/shoe3.jpg" alt="" />
+                        </a>
+                        <h3>商品的名称ddddddddddddddddddddddd</h3>
+                        <h4>商品的描述=名称商品的描述=名称商品的</h4>
+                        <p class="unit">￥</p>
+                        <p class="ourprice">223</p>
+                        <p class="listprice">111</p>
+                        <h5>商铺的名称</h5>
+                        <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                     </li>
+                     
+                 </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

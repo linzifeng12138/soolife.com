@@ -54,10 +54,10 @@ padding: 0;margin: 0;}
 
 body{
     width:100%;
-    /*height:8000px;*/
+    height:9000px;
     min-width: 1210px;
     /*防止浏览窗口缩小出现的显示bug*/
-    /*background: pink;*/
+    background:pink;
     /*position:relative;*/
 }
 .container{
