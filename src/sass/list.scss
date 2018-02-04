@@ -32,7 +32,7 @@ $king: rgb(246,171,0) !global;
 #nav_list .price_area .price_box a{padding-left:18px;padding-right:17px;line-height:50px;font-size:12px;}
 
 #maingoods_list{width:100%;height:1570px;background:#efefef;}
-#maingoods_list .option_list{height:33px;background:white;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+#maingoods_list .option_list{height:33px;background:white;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-bottom:15px;}
 #maingoods_list .option_list>span,
 #maingoods_list .option_list a{position:relative;font-size:12px;display:inline-block;width:80px;height:33px;line-height:33px;border-right:1px solid #ccc;padding-left:20px;}
 #maingoods_list .option_list a:first-of-type{padding-left:23px;}
@@ -42,20 +42,34 @@ $king: rgb(246,171,0) !global;
 #maingoods_list .pagehere p:first-child{width:88px;height:33px;float:left;font-size:12px;line-height:33px;}
 #maingoods_list .pagehere p:last-child{width:88px;height:33px;float:left;font-size:12px;line-height:33px;}
 
+
+#real_page{width:100%;height:80px;background:#efefef;}
+#real_page .container{height:80px;background:white;}
+
+
+#hotsell{padding-top:15px;width:100%;height:450px;background:#efefef;}
+#hotsell .hottitle{height:40px;background:$skyblue;line-height:40px;padding-left:18px;margin-bottom:15px;color:white;}
+
 /*数据生成的li列表页的样式开始*/
-#maingoods_list .goodsdatalist{width:1200px;padding-top:12px;}
-#maingoods_list .goodsdatalist ul li{float:left;width:222px;margin-right:20px;margin-bottom:23px;background:white;border:1px solid #ccc;}
-#maingoods_list .goodsdatalist ul li:nth-child(5n){margin-right:0px;}
-#maingoods_list .goodsdatalist ul li a:first-child{display:block;width:200px;height:200px;margin-left:13px;}
-#maingoods_list .goodsdatalist ul li a img{width:200px;height:200px;}
-#maingoods_list .goodsdatalist ul li h3{margin-left:13px;width:200px;height:20px;font-size:15px;line-height:20px;color:$king;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-#maingoods_list .goodsdatalist ul li h4{margin-left:13px;width:200px;height:43px;font-size:14px;line-height:20px;color:$skyblue;}
-#maingoods_list .goodsdatalist ul li .unit{float:left;width:17px;height:27px;padding-top:5px;line-height:20px;margin-left:10px;color:$king;}
-#maingoods_list .goodsdatalist ul li .ourprice{float:left;width:33px;height:27px;font-size:18px;padding-top:5px;line-height:20px;color:$king;}
-#maingoods_list .goodsdatalist ul li .listprice{float:left;
+ .li_style0{width:1200px;}
+ .li_style0 ul li{float:left;width:222px;margin-right:20px;margin-bottom:23px;background:white;border:1px solid #ccc;}
+ .li_style0 ul li:nth-child(5n){margin-right:0px;}
+/*商品图片*/
+ .li_style0 ul li a:first-child{display:block;width:200px;height:200px;margin-left:13px;}
+ .li_style0 ul li a img{width:200px;height:200px;}
+/*商品名称*/
+ .li_style0 ul li h3{margin-left:13px;width:200px;height:20px;font-size:15px;line-height:20px;color:$king;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/*商品描述*/
+ .li_style0 ul li h4{margin-left:13px;width:200px;height:43px;font-size:14px;line-height:20px;color:$skyblue;}
+ /*各种价格*/
+ .li_style0 ul li .unit{float:left;width:17px;height:27px;padding-top:5px;line-height:20px;margin-left:10px;color:$king;}
+ .li_style0 ul li .ourprice{float:left;width:33px;height:27px;font-size:18px;padding-top:5px;line-height:20px;color:$king;}
+ .li_style0 ul li .listprice{float:left;
 width:150px;height:22px;padding-left:4px;margin-top:5px;line-height:22px;font-size:13px;text-decoration:line-through;}
-#maingoods_list .goodsdatalist ul li h5{float:left;margin-left:13px;width:200px;font-size:14px;height:35px;line-height:35px;}
-#maingoods_list .goodsdatalist ul li .addcar_btn{float:left;display:block;width:110px;height:30px;background:$king;line-height:30px;font-size:12px;text-align:center;color:white;position:relative;}
-#maingoods_list .goodsdatalist ul li .addcar_btn i{display:block;width:19px;height:16px;background:url("../img/lzfwww.png") no-repeat;background-position:-396px 0px;position:absolute;left:3px;top:7px;}
-#maingoods_list .goodsdatalist ul li .focuson{float:left;display:block;width:110px;height:30px;background:$skyblue;line-height:30px;font-size:12px;text-align:center;color:white;position:relative;}
-#maingoods_list .goodsdatalist ul li .focuson span{display:block;width:19px;height:16px;background:url("../img/lzfwww.png") no-repeat;background-position:-425px 0px;position:absolute;left:7px;top:7px;}
+/*商铺名称*/
+ .li_style0 ul li h5{float:left;margin-left:13px;width:200px;font-size:14px;height:35px;line-height:35px;}
+ /*购物车*/
+ .li_style0 ul li .addcar_btn{float:left;display:block;width:110px;height:30px;background:$king;line-height:30px;font-size:12px;text-align:center;color:white;position:relative;}
+ .li_style0 ul li .addcar_btn i{display:block;width:19px;height:16px;background:url("../img/lzfwww.png") no-repeat;background-position:-396px 0px;position:absolute;left:3px;top:7px;}
+ .li_style0 ul li .focuson{float:left;display:block;width:110px;height:30px;background:$skyblue;line-height:30px;font-size:12px;text-align:center;color:white;position:relative;}
+ .li_style0 ul li .focuson span{display:block;width:19px;height:16px;background:url("../img/lzfwww.png") no-repeat;background-position:-425px 0px;position:absolute;left:7px;top:7px;}

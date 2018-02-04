@@ -1,10 +1,9 @@
-/* 
-* @Author: Marte
-* @Date:   2018-02-04 14:24:58
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-02-04 14:25:00
-*/
+jQuery(function($){
+    //引入头部HTML文件,包括顶部导航栏，nav ，和产品列表菜单栏
+    $('#pageHeader').load('../html/header.html');
 
-$(document).ready(function(){
-    
+     // 实现点击切换隐藏二级菜单栏
+    $('#catelist h3').on('click',function(){
+        $('#catelist .tablist1').slideToggle(250);
+    });
 });
