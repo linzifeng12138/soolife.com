@@ -1,0 +1,517 @@
+@charset "UTF-8";
+body {
+  background: #FBFBFB;
+}
+
+#top_nav {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background: #f6ab00;
+}
+
+#top_nav ul {
+  position: relative;
+}
+
+#top_nav ul li {
+  float: left;
+}
+
+#top_nav ul li a {
+  display: block;
+  height: 39px;
+  line-height: 40px;
+  color: white;
+  border-right: 1px solid #efefef;
+  text-align: center;
+  font-size: 14px;
+}
+
+#top_nav ul li:nth-child(1) a {
+  border-left: 1px solid #efefef;
+}
+
+#top_nav ul li:nth-child(1) a,
+#top_nav ul li:nth-child(3) a,
+#top_nav ul li:nth-child(4) a,
+#top_nav ul li:nth-child(6) a {
+  width: 120px;
+}
+
+#top_nav ul li:nth-child(2) a,
+#top_nav ul li:nth-child(5) a {
+  width: 200px;
+}
+
+#top_nav ul li:nth-child(5) a {
+  border-left: 1px solid #efefef;
+  margin-left: 240px;
+}
+
+#path {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: #FBFBFB;
+}
+
+#path .container {
+  border-bottom: 1px solid #efefef;
+}
+
+#path .house {
+  position: absolute;
+  left: 27px;
+  top: 13px;
+  display: block;
+  width: 19px;
+  height: 17px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -458px 0px;
+}
+
+#path a {
+  font-size: 12px;
+  line-height: 45px;
+  color: #33a1db;
+}
+
+#path a:first-of-type {
+  padding-left: 16px;
+}
+
+#path a:hover {
+  color: #f6ab00;
+}
+
+#detail {
+  width: 100%;
+  height: 535px;
+  border-top: 1px solid #efefef;
+}
+
+#detail .container {
+  background: white;
+}
+
+/*整一个图片展示盒子，包含大图和小图列表的样式*/
+#detail .picbox {
+  width: 400px;
+  height: 534px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+/*大图展示的样式*/
+#detail .picbox .biglist {
+  width: 400px;
+  height: 385px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+#detail .picbox .biglist .targetpic {
+  width: 370px;
+  height: 370px;
+}
+
+/*焦点盒子，固定宽高*/
+#detail .focus {
+  margin-top: 17px;
+  width: 400px;
+  height: 70px;
+  z-index: 33;
+}
+
+/*小图展示的样式*/
+#detail .picbox .smallList {
+  width: 3000px;
+  height: 70px;
+  background: white;
+  position: absolute;
+  left: 22px;
+  top: 405px;
+}
+
+#detail .picbox .smallList li {
+  float: left;
+  width: 70px;
+  height: 70px;
+  padding-right: 8px;
+}
+
+#detail .picbox .smallList img {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #efefef;
+  float: left;
+}
+
+/*左右箭头切换的样式*/
+#detail .left_arr {
+  display: block;
+  width: 22px;
+  height: 30px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -517px 0px;
+  position: absolute;
+  left: -1px;
+  top: 420px;
+  z-index: 234;
+}
+
+#detail .outerright {
+  display: block;
+  width: 28px;
+  height: 72px;
+  background: white;
+  position: absolute;
+  right: 0px;
+  top: 400px;
+}
+
+#detail .outerright .right_arr {
+  display: block;
+  width: 20px;
+  height: 31px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -492px 0px;
+  margin-top: 20px;
+}
+
+.highline_border {
+  border: 1px solid #f6ab00;
+}
+
+#detail .textbox {
+  padding-top: 20px;
+  width: 532px;
+  height: 534px;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  background: white;
+}
+
+#detail .textbox .goods_title {
+  width: 530px;
+  height: 40px;
+  line-height: 23px;
+  font-size: 20px;
+  padding-left: 13px;
+  color: #33a1db;
+}
+
+#detail .textbox .goods_desc {
+  width: 530px;
+  height: 24px;
+  font-size: 14px;
+  padding-left: 13px;
+  color: #f6ab00;
+  margin-bottom: 10px;
+}
+
+#detail .price_box {
+  position: relative;
+  width: 530px;
+  height: 115px;
+  background: #F7F7F7;
+  padding-top: 25px;
+}
+
+#detail .price_box .p1 {
+  width: 420px;
+  height: 40px;
+  padding-left: 15px;
+  color: #CC0000;
+}
+
+#detail .price_box .p1 .ourprice {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+#detail .price_box .p1 .soolife {
+  margin-left: 70px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #33a1db;
+}
+
+#detail .price_box .p2 {
+  width: 420px;
+  height: 40px;
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+#detail .price_box .p2 .listprice {
+  text-decoration: line-through;
+}
+
+#detail .price_box .code {
+  display: block;
+  width: 99px;
+  height: 113px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -551px 0px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+
+#detail .note {
+  width: 530px;
+  height: 28px;
+  background: url("../img/star22.png") no-repeat;
+}
+
+#detail .service {
+  width: 530px;
+  height: 26px;
+  background: white;
+}
+
+#detail h3 {
+  float: left;
+  width: 66px;
+  height: 26px;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+}
+
+#detail h4 {
+  float: right;
+  width: 460px;
+  height: 26px;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+#detail .location {
+  height: 40px;
+  width: 530px;
+  background: white;
+}
+
+#detail .location h3 {
+  line-height: 40px;
+}
+
+#detail .location .selected {
+  float: left;
+  width: 105px;
+  height: 40px;
+  background: url("../img/loca.png") no-repeat;
+}
+
+#detail .color {
+  width: 530px;
+  height: 30px;
+  background: white;
+}
+
+#detail .color h3 {
+  float: left;
+}
+
+#detail .color a {
+  display: inline-block;
+  width: 35px;
+  height: 25px;
+  border: 1px solid #efefef;
+  font-size: 12px;
+  text-align: center;
+  line-height: 25px;
+}
+
+#detail .goods_qty {
+  width: 530px;
+  height: 40px;
+  background: white;
+}
+
+#detail .goods_qty h3 {
+  line-height: 40px;
+}
+
+#detail .goods_qty .qty {
+  border: 1px solid #efefef;
+  width: 89px;
+  height: 33px;
+  padding-left: 35px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#detail .btnbox {
+  width: 530px;
+  height: 60px;
+  padding-left: 12px;
+  background: white;
+}
+
+#detail .btnbox a {
+  display: inline-block;
+  line-height: 50px;
+}
+
+#detail .btnbox a:first-child {
+  width: 110px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: #f6ab00;
+  border-radius: 4px;
+}
+
+#detail .btnbox a:last-child {
+  position: relative;
+  width: 110px;
+  height: 50px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  padding-left: 45px;
+}
+
+#detail .btnbox a:last-child i {
+  display: block;
+  width: 17px;
+  height: 18px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -423px -24px;
+  position: absolute;
+  left: 23px;
+  top: 15px;
+}
+
+#detail .btnbox .addcar_btn {
+  position: relative;
+  width: 130px;
+  height: 50px;
+  background: #33a1db;
+  color: white;
+  border-radius: 4px;
+  padding-left: 33px;
+}
+
+#detail .btnbox .addcar_btn i {
+  display: block;
+  width: 17px;
+  height: 18px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -397px -24px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+#detail .shopbox {
+  width: 265px;
+  height: 536px;
+  background: url("../img/shop.png") no-repeat;
+}
+
+#detail .showbox {
+  margin-top: 30px;
+  width: 923px;
+  background: white;
+}
+
+#detail .showbox ul {
+  width: 920px;
+  height: 40px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding-left: 29px;
+}
+
+#detail .showbox ul li {
+  float: left;
+  width: 131px;
+  height: 40px;
+  padding-left: 50px;
+  line-height: 40px;
+}
+
+/*商品规格*/
+#detail .showbox .guige {
+  border-bottom: 1px solid #efefef;
+}
+
+#detail .showbox .guige h3 {
+  width: 923px;
+  height: 70px;
+  background: url("../img/specs.png") no-repeat;
+}
+
+#detail .showbox .guige h4 {
+  padding-left: 15px;
+  width: 923px;
+  font-size: 14px;
+}
+
+#detail .showbox .guige h4:nth-of-type(1),
+#detail .showbox .guige h4:nth-of-type(2),
+#detail .showbox .guige h4:nth-of-type(3) {
+  height: 40px;
+}
+
+#detail .showbox .guige h4:nth-of-type(4),
+#detail .showbox .guige h4:nth-of-type(5),
+#detail .showbox .guige h4:nth-of-type(6) {
+  height: 80px;
+}
+
+#detail .showbox .guige h4 span:first-child {
+  display: inline-block;
+  width: 96px;
+  vertical-align: top;
+  text-align: center;
+}
+
+#detail .showbox .guige h4 span:nth-child(2) {
+  display: inline-block;
+  width: 800px;
+  vertical-align: top;
+}
+
+#detail .showbox .xiangqing {
+  background: white;
+}
+
+#detail .showbox .xiangqing h3 {
+  width: 923px;
+  height: 66px;
+  background: url("../img/detail.png") no-repeat;
+}
+
+#detail .showbox .xiangqing h4 {
+  width: 923px;
+  height: 1800px;
+  background: url("../img/cap2.png") no-repeat;
+}
+
+#detail .showbox .qingdan {
+  width: 923px;
+  height: 850px;
+  background: url("../img/buyer.png") no-repeat;
+}
+
+#detail .showbox .koubei {
+  width: 923px;
+  height: 270px;
+  background: url("../img/review.png") no-repeat;
+}
+
+#detail .promise {
+  width: 265px;
+  height: 230px;
+  background: url("../img/promise.png") no-repeat;
+  margin-top: 30px;
+  margin-left: 10px;
+}
