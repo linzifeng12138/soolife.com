@@ -28,7 +28,8 @@ body{background:#FBFBFB;}
 #path a:first-of-type{padding-left:16px;}
 #path a:hover{color:$king;}
 
-#detail{width:100%;height:535px;border-top:1px solid #efefef;}
+#detail{width:100%;height:535px;}
+#detail .container{border-top:1px solid #efefef;}
 #detail .container{background:white;}
 /*整一个图片展示盒子，包含大图和小图列表的样式*/
 #detail .picbox{width:400px;height:534px;
@@ -44,12 +45,13 @@ body{background:#FBFBFB;}
 /*小图展示的样式*/
 #detail .picbox .smallList{width:3000px;height:70px;background: white;position:absolute;left:22px;top:405px;}
 #detail .picbox .smallList li{float:left;width:70px;height:70px;padding-right:8px;}
-#detail .picbox .smallList img{width:65px;height:65px;border:1px solid #efefef;float:left;}
+#detail .picbox .smallList img{width:65px;height:65px;float:left;box-shadow:1px 0 1px;}
 /*左右箭头切换的样式*/
 #detail .left_arr{display:block;width:22px;height:30px;background:url("../img/lzfwww.png") no-repeat;background-position:-517px 0px;position:absolute;left:-1px;top:420px;z-index:234;}
 #detail .outerright{display:block;width:28px;height:72px;background:white;position:absolute;right:0px;top:400px;}
 #detail .outerright .right_arr{display:block;width:20px;height:31px;background:url("../img/lzfwww.png") no-repeat;background-position:-492px 0px;margin-top:20px;}
-.highline_border{border:1px solid $king;}
+
+
 
 #detail .textbox{padding-top:20px;width:532px;height:534px;border-left:1px solid #efefef;border-right:1px solid #efefef;background:white;}
 #detail .textbox .goods_title{width:530px;height:40px;line-height:23px;font-size:20px;padding-left:13px;color:$skyblue;}
@@ -73,7 +75,8 @@ body{background:#FBFBFB;}
 #detail .location .selected{float:left;width:105px;height:40px;background:url("../img/loca.png") no-repeat;}
 #detail .color{width:530px;height:30px;background:white;}
 #detail .color h3{float:left;}
-#detail .color a{display:inline-block;width:35px;height:25px;border:1px solid #efefef;font-size:12px;text-align:center;line-height:25px;}
+#detail .color span{display:inline-block;width:35px;height:25px;border:1px solid #efefef;}
+#detail .color span a{display:inline-block;width:35px;height:25px;font-size:12px;text-align:center;line-height:25px;}
 #detail .goods_qty{width:530px;height:40px;background:white;}
 #detail .goods_qty h3{line-height:40px;}
 #detail .goods_qty .qty{border:1px solid #efefef;width:89px;height:33px;padding-left:35px;font-size:17px;font-weight:bold;}
@@ -90,9 +93,15 @@ body{background:#FBFBFB;}
 
 #detail .showbox{margin-top:30px;width:923px;background:white;}
 #detail .showbox ul{width:920px;height:40px;border-top:1px solid #efefef;border-bottom:1px solid #efefef;padding-left:29px;}
-#detail .showbox ul li{float:left;width:131px;height:40px;padding-left:50px;line-height:40px;}
+#detail .showbox ul li{float:left;width:131px;height:40px;padding-left:50px;line-height:40px;position:relative;}
+/*小图标样式*/
+#detail .showbox ul li i{display:inline-block;width:19px;height:20px;background:url("../img/lzfwww.png") no-repeat;background-position:-1px -72px;position:absolute;left:16px;top:10px;}
+#detail .showbox ul li:nth-child(2) i{background-position:-33px -72px;}
+#detail .showbox ul li:nth-child(3) i{background-position:-58px -72px;}
+#detail .showbox ul li:nth-child(4) i{background-position:-90px -72px;}
 
 /*商品规格*/
+.border_bottom{border-bottom:2px solid $king;}
 #detail .showbox .guige{border-bottom:1px solid #efefef;}
 #detail .showbox .guige h3{width:923px;height:70px;background:url("../img/specs.png") no-repeat;}
 #detail .showbox .guige h4{padding-left:15px;width:923px;font-size:14px;}
@@ -114,3 +123,4 @@ body{background:#FBFBFB;}
 
 #detail .promise{width:265px;height:230px;background:url("../img/promise.png") no-repeat;margin-top:30px;margin-left:10px;}
 
+.border{border:1px solid $king;color:$king;}
