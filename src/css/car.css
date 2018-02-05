@@ -1,0 +1,273 @@
+body {
+  background: #FBFBFB;
+}
+
+#topnav {
+  width: 100%;
+  height: 30px;
+  background: whitesmoke;
+}
+
+#topnav .username {
+  display: inline-block;
+  width: 118px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+#topnav .loginhere, #topnav .reghere {
+  padding-right: 7px;
+  padding-left: 3px;
+  color: #37a0db;
+  font-size: 12px;
+  border-right: 1px solid #ccc;
+}
+
+#topnav .smalllogo {
+  display: inline-block;
+  width: 21px;
+  height: 27px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -196px 0px;
+  vertical-align: top;
+}
+
+#topnav .wb {
+  background-position: -232px 0px;
+}
+
+#topnav .topnav_right {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+#topnav .topnav_right li {
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+}
+
+#topnav .topnav_right li:not(:nth-child(2)) {
+  padding-right: 15px;
+}
+
+#topnav .topnav_right li:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+#topnav .topnav_right li a {
+  color: #37a0db;
+}
+
+#topnav .topnav_right li:not(:nth-child(2)) i {
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: -7px;
+  width: 11px;
+  height: 28px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -337px 0px;
+}
+
+#soolife_title {
+  width: 100%;
+  height: 117px;
+  padding-top: 10px;
+  background: #FBFBFB;
+}
+
+#soolife_title h2 {
+  width: 1230px;
+  height: 103px;
+  background: url("../img/navpic.png") no-repeat;
+}
+
+.totalnum {
+  width: 100%;
+  height: 35px;
+  background: #FBFBFB;
+}
+
+.totalnum h3 {
+  color: #f6ab00;
+}
+
+#tableitem {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+#tableitem .container {
+  height: 40px;
+  padding-left: 11px;
+  background: #F1F1F1;
+}
+
+#tableitem .allcheck {
+  float: left;
+  margin-top: 14px;
+}
+
+#tableitem ul {
+  float: left;
+  margin-left: 10px;
+  width: 1160px;
+  height: 40px;
+}
+
+#tableitem ul li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#tableitem ul li:nth-child(1) {
+  width: 104px;
+}
+
+#tableitem ul li:nth-child(2) {
+  width: 394px;
+}
+
+#tableitem ul li:nth-child(3) {
+  width: 135px;
+}
+
+#tableitem ul li:nth-child(4) {
+  width: 80px;
+  margin-left: 60px;
+}
+
+#tableitem ul li:nth-child(5) {
+  width: 103px;
+}
+
+#tableitem ul li:nth-child(6) {
+  width: 175px;
+}
+
+#tableitem ul li:nth-child(7) {
+  width: 109px;
+}
+
+#maincar {
+  width: 100%;
+  min-height: 200px;
+  background: pink;
+}
+
+#maincar ul li {
+  width: 1200px;
+  box-shadow: 1px 0 1px;
+  margin-bottom: 17px;
+}
+
+#maincar ul li .item_title {
+  height: 40px;
+  background: #FBFBFB;
+  border-bottom: 2px solid #33a1db;
+}
+
+#maincar ul li .item_title .onecheck {
+  float: left;
+  margin-left: 10px;
+  margin-top: 14px;
+}
+
+#maincar ul li .item_title .shop_name {
+  float: left;
+  line-height: 40px;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+#maincar ul li .maincontent {
+  height: 133px;
+  padding-top: 23px;
+  background: #fff4e8;
+}
+
+#maincar ul li .maincontent .onecheck {
+  margin-left: 10px;
+}
+
+#maincar ul li .maincontent img {
+  width: 90px;
+  height: 90px;
+  margin-left: 23px;
+}
+
+#maincar ul li .maincontent .information {
+  display: inline-block;
+  width: 380px;
+  height: 100px;
+  padding-top: 35px;
+  line-height: 16px;
+  font-size: 13px;
+  vertical-align: top;
+  background: lightgreen;
+}
+
+#maincar ul li .maincontent .price {
+  display: inline-block;
+  width: 135px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 60px;
+  background: yellow;
+}
+
+#maincar ul li .maincontent .starcoin {
+  display: inline-block;
+  width: 83px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: top;
+  background: blue;
+}
+
+#maincar ul li .maincontent .goodsnum {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: top;
+  background: orange;
+}
+
+#maincar ul li .maincontent .goodsnum .minus {
+  float: left;
+  width: 20px;
+  height: 23px;
+  cursor: pointer;
+}
+
+#maincar ul li .maincontent .goodsnum .plus {
+  float: right;
+  width: 20px;
+  height: 23px;
+  cursor: pointer;
+}
+
+#maincar ul li .maincontent .goodsnum .qty {
+  width: 40px;
+  height: 20px;
+  padding-left: 17px;
+  border: 1px solid #ccc;
+}

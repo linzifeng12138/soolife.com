@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>购物车 | 如此生活</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/car.css" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/car.js"></script>
+</head>
+<body>
+    <div id="topnav">
+        <div class="container">
+            <span class="username">Hi, 欢迎来到如此生活</span>
+            <a href="#" class="loginhere">登录</a>
+            <a href="#" class="reghere">免费注册</a>
+            <a href="#" class="wx smalllogo"></a>
+            <a href="#" class="wb smalllogo"></a>
+            <ul class="topnav_right">
+                <li><a href="#">我的生活</a><i></i></li>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">帮助中心</a><i></i></li>
+                <li><a href="#">更多导航</a><i></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="soolife_title">
+        <div class="container">
+            <h2></h2>
+        </div>
+    </div>
+
+    <div class="totalnum">
+        <div class="container">
+            <h3>全部商品
+                （<span class="totalqty">3</span>）
+            </h3>
+        </div>    
+    </div>
+
+    <div id="tableitem">
+        <div class="container">
+            <input class="allcheck" type="checkbox" checked/>
+            <ul>
+                <li>全选</li>
+                <li>商品信息</li>
+                <li>如此生活（价）</li>
+                <li>星币</li>
+                <li>数量</li>
+                <li>小计（元）</li>
+                <li>操作</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="maincar">
+        <div class="container">
+            <ul>
+                <li data-guid="001">
+                    <div class="item_title">
+                        <input type="checkbox" class="onecheck" checked/>
+                        <h3 class="shop_name">店铺名称店铺名称数据生成</h3>
+                    </div>
+                    
+                    <div class="maincontent">
+                        <input type="checkbox" class="onecheck" checked/>
+                        <img src="../img/shoe3.jpg" alt="" />
+                        <span class="information">海尔斯（HEALTH)超轻慢跑运动鞋237g775海尔斯（HEALTH)</span>
+                        <span class="price">￥<i class="ourprice">189.00</i></span>
+                        <span class="starcoin">0</span>
+                        <span class="goodsnum">
+                            <div class="minus">-</div>
+                            <input type="text"  value="1" class="qty" />
+                            <div class="plus">+</div>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

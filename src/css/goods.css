@@ -321,16 +321,17 @@ body {
   display: inline-block;
   width: 35px;
   height: 25px;
-  border: 1px solid #efefef;
 }
 
-#detail .color span a {
+/*这里是#detail .color span a的样式，由于层级权重的问题，只能这样写，否则后面的jQuery添加高亮样式会失败*/
+.border0 {
   display: inline-block;
   width: 35px;
   height: 25px;
   font-size: 12px;
   text-align: center;
   line-height: 25px;
+  border: 1px solid #efefef;
 }
 
 #detail .goods_qty {
