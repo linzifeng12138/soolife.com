@@ -54,8 +54,8 @@ padding: 0;margin: 0;}
 
 body{
     width:100%;
-    height:9000px;
-    min-width: 1210px;
+    /*height:9000px;*/
+    min-width: 1200px;
     /*防止浏览窗口缩小出现的显示bug*/
     /*background:skyblue;*/
     /*position:relative;*/

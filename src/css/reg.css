@@ -1,0 +1,158 @@
+#header {
+  width: 100%;
+  height: 110px;
+  background: url("../img/reghead.png") no-repeat;
+}
+
+#regbody {
+  width: 100%;
+  height: 600px;
+}
+
+#regbody .reghere {
+  width: 450px;
+  height: 600px;
+  margin-left: 400px;
+}
+
+#regbody .reghere .reg_title {
+  padding-left: 100px;
+  padding-top: 30px;
+  height: 85px;
+}
+
+#regbody .reghere .reg_title h3 {
+  float: left;
+  width: 100px;
+  font-size: 25px;
+}
+
+#regbody .reghere .reg_title span {
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-top: 13px;
+}
+
+#regbody .reghere .reg_title span a {
+  color: skyblue;
+}
+
+#regbody .reghere .phone,
+#regbody .reghere .checkcode,
+#regbody .reghere .check,
+#regbody .reghere .password,
+#regbody .reghere .password_confirm {
+  padding-left: 22px;
+  padding-top: 10px;
+  width: 450px;
+  height: 63px;
+}
+
+#regbody input {
+  border: 1px solid #ccc;
+  color: black;
+}
+
+#regbody .reghere .phone span {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .phone input {
+  width: 300px;
+  height: 43px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .checkcode span {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .checkcode input {
+  width: 150px;
+  height: 43px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .checkcode .shuiji {
+  width: 130px;
+  height: 43px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  line-height: 43px;
+  text-align: center;
+  background: pink;
+}
+
+#regbody .reghere .check span {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .check input {
+  width: 200px;
+  height: 43px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .check .getcode {
+  width: 95px;
+  height: 43px;
+  display: inline-block;
+  background: pink;
+  vertical-align: top;
+  line-height: 43px;
+  text-align: center;
+}
+
+#regbody .reghere .password span,
+#regbody .reghere .password_confirm span {
+  font-size: 14px;
+}
+
+#regbody .reghere .password input,
+#regbody .reghere .password_confirm input {
+  width: 300px;
+  height: 43px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#regbody .reghere .password span {
+  margin-right: 28px;
+}
+
+#regbody .reghere .agreement {
+  margin-top: 33px;
+  width: 450px;
+  height: 55px;
+  padding-left: 88px;
+  padding-top: 17px;
+  font-size: 12px;
+}
+
+#regbody .regbtn {
+  width: 300px;
+  height: 40px;
+  background: #FE3F71;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 73px;
+  color: white;
+  cursor: pointer;
+}
+
+#footer {
+  width: 100%;
+}
+
+#footer .container {
+  height: 376px;
+  background: url("../img/footer.png") no-repeat;
+}

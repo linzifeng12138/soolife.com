@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: #FBFBFB;
 }
@@ -97,6 +98,7 @@ body {
   color: #f6ab00;
 }
 
+/*购物车的标题栏样式*/
 #tableitem {
   width: 100%;
   height: 40px;
@@ -158,18 +160,20 @@ body {
   width: 109px;
 }
 
+/*购物车的主体的样式开始*/
 #maincar {
   width: 100%;
   min-height: 200px;
-  background: pink;
+  background: #FBFBFB;
 }
 
 #maincar ul li {
   width: 1200px;
   box-shadow: 1px 0 1px;
-  margin-bottom: 17px;
+  margin-top: 17px;
 }
 
+/*购物车的店铺信息样式开始*/
 #maincar ul li .item_title {
   height: 40px;
   background: #FBFBFB;
@@ -189,6 +193,7 @@ body {
   margin-left: 15px;
 }
 
+/*购物车商品信息主体样式开始 ，注意要vertical-align:top;*/
 #maincar ul li .maincontent {
   height: 133px;
   padding-top: 23px;
@@ -199,23 +204,27 @@ body {
   margin-left: 10px;
 }
 
+/*图片的样式*/
 #maincar ul li .maincontent img {
   width: 90px;
   height: 90px;
   margin-left: 23px;
 }
 
+/*产品信息栏*/
 #maincar ul li .maincontent .information {
   display: inline-block;
   width: 380px;
   height: 100px;
   padding-top: 35px;
+  padding-left: 23px;
+  padding-right: 130px;
   line-height: 16px;
   font-size: 13px;
   vertical-align: top;
-  background: lightgreen;
 }
 
+/*产品价格*/
 #maincar ul li .maincontent .price {
   display: inline-block;
   width: 135px;
@@ -225,9 +234,11 @@ body {
   text-align: center;
   vertical-align: top;
   margin-right: 60px;
-  background: yellow;
+  color: #CC0000;
+  font-weight: bold;
 }
 
+/*星币数量*/
 #maincar ul li .maincontent .starcoin {
   display: inline-block;
   width: 83px;
@@ -236,9 +247,9 @@ body {
   font-size: 12px;
   text-align: center;
   vertical-align: top;
-  background: blue;
 }
 
+/*产品数量*/
 #maincar ul li .maincontent .goodsnum {
   position: relative;
   display: inline-block;
@@ -248,7 +259,6 @@ body {
   font-size: 12px;
   text-align: center;
   vertical-align: top;
-  background: orange;
 }
 
 #maincar ul li .maincontent .goodsnum .minus {
@@ -270,4 +280,227 @@ body {
   height: 20px;
   padding-left: 17px;
   border: 1px solid #ccc;
+}
+
+#maincar ul li .maincontent .total_cost {
+  display: inline-block;
+  width: 180px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+#maincar ul li .maincontent .total_cost .real_cost {
+  font-weight: bold;
+  color: #CC0000;
+}
+
+#maincar ul li .maincontent .delete {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 100px;
+  background: #FFF4E8;
+  vertical-align: top;
+}
+
+#maincar ul li .maincontent .delete .del_btn {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -125px -70px;
+  position: absolute;
+  left: 35px;
+  top: 40px;
+}
+
+/*购物车的主体的样式结束*/
+#payout {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+}
+
+#payout .container {
+  box-shadow: 1px 0 1px;
+  padding-left: 15px;
+}
+
+#payout .quanxuan {
+  vertical-align: top;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+#payout .buyagain {
+  vertical-align: top;
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+#payout .payinfo {
+  vertical-align: top;
+  display: inline-block;
+  height: 40px;
+  margin-left: 628px;
+}
+
+#payout .payinfo .acount {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  font-size: 12px;
+}
+
+#payout .payinfo .price_box {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  font-size: 12px;
+}
+
+#payout .payinfo .price_box .totalhere {
+  display: inline-block;
+  width: 90px;
+  height: 20px;
+  font-size: 14px;
+}
+
+#payout .pay_btn {
+  position: relative;
+  display: inline-block;
+  width: 95px;
+  height: 40px;
+  background: #f6ab00;
+  color: white;
+  padding-left: 33px;
+  line-height: 40px;
+  border-radius: 4px;
+}
+
+#payout .pay_btn i {
+  display: block;
+  width: 20px;
+  height: 16px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -395px 0;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+#guess {
+  width: 100%;
+  height: 360px;
+}
+
+#guess .container {
+  height: 360px;
+  border-bottom: 2px solid red;
+}
+
+#guess .guess_title {
+  width: 1200px;
+  height: 55px;
+  padding-left: 15px;
+  padding-top: 17px;
+  font-size: 12px;
+}
+
+#guess .guess_title span:first-child {
+  color: red;
+  border-bottom: 1px solid red;
+  margin-right: 20px;
+}
+
+#guess .datafocus {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+#guess .datafocus ul {
+  width: 12000px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#guess .datafocus ul li {
+  float: left;
+  width: 270px;
+  height: 298px;
+  margin-right: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
+  background: #FBFBFB;
+  border: 1px solid #ccc;
+}
+
+#guess .datafocus ul li:last-child {
+  margin-right: 0px;
+}
+
+#guess .datafocus ul li img {
+  width: 160px;
+  height: 160px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+#guess .datafocus ul li h4 {
+  font-size: 13px;
+  line-height: 19px;
+}
+
+#guess .datafocus ul li h5 {
+  line-height: 34px;
+}
+
+#guess .datafocus ul li button {
+  margin-left: 33px;
+}
+
+#guess .datafocus i {
+  display: block;
+  cursor: pointer;
+  width: 26px;
+  height: 62px;
+}
+
+#guess .datafocus .font_arr {
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -176px -69px;
+  position: absolute;
+  left: 9px;
+  top: 122px;
+  z-index: 233;
+}
+
+#guess .datafocus .back_arr {
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -224px -69px;
+  position: absolute;
+  right: 7px;
+  top: 122px;
+  z-index: 233;
+}
+
+#footer {
+  width: 100%;
+}
+
+#footer .container {
+  height: 376px;
+  background: url("../img/footer.png") no-repeat;
 }

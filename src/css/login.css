@@ -1,0 +1,120 @@
+#header {
+  width: 100%;
+  height: 110px;
+  background: url("../img/loginhead.png") no-repeat;
+}
+
+#loginbody {
+  position: relative;
+  width: 100%;
+  height: 530px;
+  background: url("../img/ban2.jpg") no-repeat;
+}
+
+#loginbody .mainbody {
+  position: absolute;
+  right: 33px;
+  top: 33px;
+  width: 360px;
+  height: 392px;
+  background: white;
+}
+
+#loginbody .mainbody h2 {
+  width: 360px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 20px;
+  background: #FD5A85;
+}
+
+#loginbody .mainbody .username,
+#loginbody .mainbody .password {
+  width: 310px;
+  height: 42px;
+  margin-left: 24px;
+  margin-top: 17px;
+  padding-left: 34px;
+  font-size: 14px;
+}
+
+#loginbody .mainbody .remember {
+  width: 360px;
+  height: 64px;
+  margin-top: 17px;
+  font-size: 12px;
+  padding-left: 24px;
+  padding-top: 30px;
+}
+
+#loginbody .mainbody .forget {
+  margin-left: 170px;
+}
+
+#loginbody .mainbody .loginbtn {
+  width: 310px;
+  height: 42px;
+  margin-left: 24px;
+  background: #FD5A85;
+  text-align: center;
+  line-height: 42px;
+  color: white;
+  cursor: pointer;
+}
+
+#loginbody .mainbody .reghere {
+  padding-left: 230px;
+  padding-top: 22px;
+  width: 360px;
+  height: 50px;
+  font-size: 12px;
+}
+
+#loginbody .mainbody .reghere a {
+  color: skyblue;
+}
+
+#loginbody .mainbody .otherway {
+  position: relative;
+  width: 360px;
+  height: 60px;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+#loginbody .mainbody .otherway i {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -198px -35px;
+  position: absolute;
+  left: 30px;
+  top: 25px;
+}
+
+#loginbody .mainbody .otherway i:last-child {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -232px -37px;
+  position: absolute;
+  left: 70px;
+  top: 25px;
+}
+
+#loginbody .mainbody input {
+  border: 1px solid #ccc;
+}
+
+#footer {
+  width: 100%;
+}
+
+#footer .container {
+  height: 376px;
+  background: url("../img/footer.png") no-repeat;
+}
