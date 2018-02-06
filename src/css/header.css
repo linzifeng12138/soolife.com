@@ -202,6 +202,154 @@
   margin-left: 3px;
 }
 
+/*页面最右端功能区代码开始*/
+.onclick {
+  background: #ff3f72;
+}
+
+#asider {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 5;
+  height: 700px;
+  overflow: hidden;
+}
+
+#asider .functionlist {
+  float: right;
+  width: 30px;
+  height: 700px;
+  background: #37a0db;
+  padding-top: 250px;
+}
+
+#asider .functionlist .shopcart {
+  width: 30px;
+  height: 140px;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 33px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#asider .functionlist .shopcart:hover {
+  background: #ff3f72;
+}
+
+#asider .functionlist .shopcart .shiftbtn {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#asider .functionlist .shopcart .goodsqty {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  background: #ff3f72;
+  margin-left: 3px;
+  margin-top: 6px;
+}
+
+#asider .contentlist {
+  float: left;
+  width: 270px;
+  height: 700px;
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#asider .contentlist h3 {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 260px;
+  height: 40px;
+  border-bottom: 2px solid #37a0db;
+  color: black;
+  line-height: 40px;
+  text-align: center;
+  font-size: 13px;
+}
+
+#asider .contentlist ul {
+  overflow: auto;
+  min-height: 130px;
+  width: 270px;
+  height: 550px;
+  margin-top: 6px;
+}
+
+#asider .contentlist ul li {
+  width: 250px;
+  height: 115px;
+  margin-bottom: 5px;
+  background: #ccc;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+#asider .contentlist ul li img {
+  float: left;
+  width: 85px;
+  height: 85px;
+}
+
+#asider .contentlist ul li .title {
+  float: left;
+  width: 130px;
+  height: 40px;
+  line-height: 18px;
+  padding-left: 13px;
+  font-size: 12px;
+}
+
+#asider .contentlist ul li .shopprice {
+  float: left;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  padding-left: 12px;
+}
+
+#asider .contentlist .shopcount {
+  padding-left: 10px;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #37a0db;
+  margin-top: 5px;
+}
+
+#asider .contentlist .shopcount .heji {
+  font-size: 18px;
+  font-weight: bold;
+  color: #37a0db;
+  margin-left: 33px;
+}
+
+#asider .contentlist .checkout {
+  display: block;
+  margin: 5px;
+  width: 260px;
+  height: 35px;
+  background: #37a0db;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+/*页面最右端黑色功能区代码结束*/
 #footer {
   width: 100%;
 }

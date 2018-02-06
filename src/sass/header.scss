@@ -1,6 +1,7 @@
 // 定义全局颜色
 $maincolor: rgb(55,160,219) !global;
 $pink: rgb(255,63,114) !global;
+$skyblue: rgb(55,160,219) !global;
 
 #topnav{width:100%;height:30px;background: rgb(245,245,245);}
 #topnav .username{display:inline-block;width:118px;height:30px;
@@ -48,6 +49,38 @@ color:white;position:absolute;right:10px;top:33px;}
     background-position:-268px 0px;}
 #mainnav .tel span{float:right;display:block;width:145px;height:23px;font-size:20px;color:$maincolor;}
 #mainnav .tel p{float:left;width:205px;height:20px;line-height:20px;font-size:13px;color:$maincolor;margin-top:3px;margin-left:3px;}
+
+/*页面最右端功能区代码开始*/
+.onclick{background:$pink;}
+#asider{position:fixed;right:0px;top:0px;z-index:5;height:700px;
+overflow:hidden;}
+
+#asider .functionlist{float:right;width:30px;height:700px;
+    background:$skyblue;padding-top:250px;}
+#asider .functionlist .shopcart{width:30px;height:140px;font-size:13px;text-align:center;padding-top:33px;border-top:1px solid white;border-bottom:1px solid white;}
+#asider .functionlist .shopcart:hover{background:$pink;}
+#asider .functionlist .shopcart .shiftbtn{padding-left:10px;padding-right:10px;color:white;cursor:pointer;}
+#asider .functionlist .shopcart .goodsqty{
+    display:block;width:25px;height:25px;border-radius:50%;
+    text-align:center;line-height:25px;color:white;
+    background:$pink;
+    margin-left:3px;margin-top:6px;}
+
+#asider .contentlist{float:left;width:270px;height:700px;display:none;
+    background:rgba(255,255,255,0.9);}
+#asider .contentlist h3{margin-left:5px;margin-right:5px;width:260px;height:40px;border-bottom:2px solid $skyblue;color:black;line-height:40px;text-align:center;font-size:13px;}
+
+#asider .contentlist ul{overflow:auto;min-height:130px;width:270px;height:550px;margin-top:6px;}
+#asider .contentlist ul li{width:250px;height:115px;margin-bottom:5px;background:#ccc;padding-top:10px;padding-left:10px;margin-left:5px;}
+#asider .contentlist ul li img{float:left;width:85px;height:85px;}
+#asider .contentlist ul li .title{float:left;width:130px;height:40px;line-height:18px;padding-left:13px;font-size:12px;}
+#asider .contentlist ul li .shopprice{float:left;width:150px;height:40px;line-height:40px;font-size:12px;padding-left:12px;}
+
+#asider .contentlist .shopcount{padding-left:10px;width:250px;height:40px;line-height:40px;font-size:12px;color:$skyblue;margin-top:5px;}
+#asider .contentlist .shopcount .heji{font-size:18px;font-weight:bold;color:$skyblue;margin-left:33px;}
+
+#asider .contentlist .checkout{display:block;margin:5px;width:260px;height:35px;background:$skyblue;line-height:35px;text-align:center;color:white;font-weight:bold;}
+/*页面最右端黑色功能区代码结束*/
 
 #footer{width:100%;}
 #footer .container{height:376px;background:url("../img/footer.png") no-repeat;}

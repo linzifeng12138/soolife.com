@@ -12,9 +12,52 @@
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-    <!-- 利用jQuery的load方法加载公共的头部内容，记得要用localhost:1992打开才能看见哦 -->
+   
+    <div id="topnav">
+        <div class="container">
+            <span class="username">Hi, 欢迎来到如此生活</span>
+            <a href="html/login.html" class="loginhere">登录</a>
+            <a href="html/reg.html" class="reghere">免费注册</a>
+            <a href="#" class="wx smalllogo"></a>
+            <a href="#" class="wb smalllogo"></a>
+            <ul class="topnav_right">
+                <li><a href="#">我的生活</a><i></i></li>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">帮助中心</a><i></i></li>
+                <li><a href="#">更多导航</a><i></i></li>
+            </ul>
+        </div>
+    </div>
+
+     <!-- 利用jQuery的load方法加载公共的头部内容，记得要用localhost:1992打开才能看见哦 -->
     <header id="pageHeader"></header>
-    
+
+    <!-- 侧边栏小购物车结构开始 -->
+    <div id="asider">
+        <div class="functionlist">
+            <div class="shopcart">
+               <i></i>
+               <h3 class="shiftbtn">购物车</h3> 
+               <span class="goodsqty">0</span>
+            </div>
+        </div>
+
+        <div class="contentlist">
+            <h3>如此生活购物车</h3>
+            <div class="smallcart">
+               <!-- <ul>调取cookie数据生成</ul> -->
+            </div>
+          
+            <h4 class="shopcount">共
+                <span class="cartQty">0</span>件
+                <span class="heji">合计：￥
+                    <span class="cartTotalCost">0.00</span>
+                </span>
+            </h4>
+            <a href="html/car.html" class="checkout">结算</a>
+        </div>    
+    </div>
+
     <div id="catelist">
         <div class="container">
             <h3>全部产品分类</h3>

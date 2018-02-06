@@ -8,7 +8,7 @@
 			//大图显示位置位置：
 			position:'left',
 			//小图与大图的间距
-			gap : 28
+			gap : 50
 		}
 		//这里的this指向实例
 		return this.each(function(idx,ele){

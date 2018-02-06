@@ -14,4 +14,11 @@ jQuery(function($){
             },16);
         }
     });
+    //首页、列表页、详情页的右侧点击切换显示小购物车列表
+    //注意该部分的HTML结构仍然在首页、列表页和详情页之中
+    //对应的样式css还是在header.css之中
+    $('#asider .shiftbtn').on('click',function(){
+        $('#asider .shopcart').toggleClass('onclick');
+        $('#asider .contentlist').fadeToggle();
+    });  
 });
