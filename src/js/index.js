@@ -26,6 +26,7 @@ require(['config'],function(){
             imgs:['img/ban2.jpg','img/ban3.jpg','img/ban4.jpg','img/ban5.png','img/ban6.png','img/ban8.png','img/ban7.jpg'],
             index:1
         });
+        
         //功能5：根据产品类别跳转到商品列表页list.html
         var $tab = $('#catelist .tablist1');console.log($tab);
         $tab.on('click','li',function(){
