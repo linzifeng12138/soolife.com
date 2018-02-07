@@ -1,3 +1,4 @@
+
 jQuery(function($){
     // 实现吸顶效果
     var toptimer;//定义全局变量

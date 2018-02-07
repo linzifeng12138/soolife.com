@@ -21,7 +21,7 @@
 			var $smallImg = $small.find('img');
 			console.log($smallImg);
 
-			//生成大图容器--并且定位
+			//生成大图显示的方框--并且定位
 			var $big = $('<div/>').addClass('gds-zoom-big');
 			var left,top;
 			if(opt.position === 'right'){
