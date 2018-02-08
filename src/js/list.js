@@ -130,7 +130,9 @@ require(['config'],function(){
                             //若已经存在产品信息：数量加1
                             carlist[i].qty++;
                         }
-                        document.cookie =  'carlist=' + JSON.stringify(carlist);
+                        var now = new Date();
+                        now.setHours(now.getHours()+1);
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;
                     }
                 });
                 // 飞入购物车动画jQuery代码开始
@@ -254,7 +256,9 @@ require(['config'],function(){
                                     //若已经存在产品信息：数量加1
                                     carlist[i].qty++;
                                 }
-                                document.cookie =  'carlist=' + JSON.stringify(carlist);
+                                var now = new Date();
+                                now.setHours(now.getHours()+1);
+                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;
                             }
                         }); 
                         
@@ -287,15 +291,123 @@ require(['config'],function(){
                         });
                     }
                 });
-            }
+            };
         };
+        // 功能6 热销产品的ajax加载和添加到购物车功能
+       
+        // 第一步获取容器
+        var $hotgoods = $('#hotsell .li_style0'); 
+        // 第二步：避免全局污染利用匿名函数发起对应类别的ajax请求in jQuery
+        (function(){
+            // var category = arr[1];当前页面的category
+            var index = 0;
+            var qty = 5;
+            $.ajax({
+                type:"post",
+                url:'../api/category.php',
+                data:{
+                    category:category,
+                    index:index,
+                    qty:qty
+                },
+                success:function(res){
+                    var res_hot = JSON.parse(res);
+                    console.log(res_hot);
+                    var ul = document.createElement('ul');
+                    ul.innerHTML = res_hot.data.map(function(item){
+                        return`
+                            <li data-guid="${item.id}">
+                                <a href="goods.html?id=${item.id}">
+                                    <img src="${item.img}" alt="" />
+                                </a>
+                                <h3>${item.title}</h3>
+                                <h4>${item.desc}</h4>
+                                <p class="unit">￥</p>
+                                <p class="ourprice">${item.ourprice}</p>
+                                <p class="listprice">${item.listprice}</p>
+                                <h5>${item.shopname}</h5>
+                                <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
+                                <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                             </li>
+                        `
+                    }).join('');
+                    $hotgoods.append(ul);
+                    ul.addEventListener('click',function(e){
+                        e = e || window.event;
+                        var target = e.target || e.srcElement;
+                     
+                        //五购物车功能 1、保存被选中的商品信息到cookie 2、点击飞入购物车动画
+                        if(target.className.toLowerCase()==='addcar_btn'){
+                            //5-1 购物车最后将在aplication标签页面会显示所有的产品信息
+                            //不管是首页传递参数生成的列表页还是本页生成的产品列表，
+                            //共用一个叫carlist的cookie
+                            var id = target.parentNode.getAttribute('data-guid');
+                            //判断carlist中是否存在相同的商品信息
+                            //判断循环是否跑完
+                            for(var i = 0; i<carlist.length; i++){
+                                if(carlist[i].id === id){
+                                    break;
+                                }
+                            }
+                            //如果点击的产品信息经过上面的循环发现并没有这个产品在购物车的话
+                            //就创建一个对象，并且计数为1；
+                            if(i === carlist.length){                    
+                                var goods = {
+                                    id:id,
+                                    img:target.parentNode.children[0].children[0].src,
+                                    title:target.parentNode.children[1].innerText,
+                                    ourprice:target.parentNode.children[4].innerText,
+                                    listprice:target.parentNode.children[5].innerText,
+                                    shopname:target.parentNode.children[6].innerText,
+                                    qty:1
+                                }
+                                carlist.unshift(goods);
+                            }else{
+                                //若已经存在产品信息：数量加1
+                                carlist[i].qty++;
+                            }
+                            var now = new Date();
+                            now.setHours(now.getHours()+1);
+                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;                          
+                        }
+                    });
 
-        //6、显示小购物车列表
+                    // 飞入购物车动画jQuery代码开始
+                    $(ul).on('click','.addcar_btn',function(){
+                        //获取事件源对象.addcar按钮DOM节点最近的li父级元素$li
+                        var $li = $(this).closest('li');
+                        // 获取当前$li下面的子元素img
+                        var $targetimg = $li.find('img');
+
+                        var $copyimg = $targetimg.clone();
+
+                        $copyimg.css({
+                            position:'absolute',
+                            left:$targetimg.offset().left,
+                            top:$targetimg.offset().top,
+                            width:$targetimg.outerWidth()
+                        });
+                        $('body').append($copyimg);
+                        // 动画
+                        $copyimg.animate({
+                            left:$('#asider .shiftbtn').offset().left,
+                            top:$('#asider .shiftbtn').offset().top,
+                            width:30,
+                            height:30
+                        },function(){
+                            // 动画完成后，删除复制的图片
+                            $copyimg.remove();
+                        });
+                    });
+                }
+            });   
+        }) ();
+
+        //7、让页面右侧的小购物车加载购物车cookie里面的商品
         var smallcart = document.querySelector('.contentlist .smallcart');
         var cartQty = document.querySelector('.contentlist .cartQty');
         var cartTotalCost =document.querySelector('.contentlist .cartTotalCost');
         var goodsQty = document.querySelector('#asider .goodsqty');console.log(goodsQty);
-        // var goodsnumber = document.querySelector('#goodsnumber');
         var cartqty = 0;
         var carttotalcost = 0;
         
@@ -321,8 +433,6 @@ require(['config'],function(){
         smallcart.appendChild(smallul);
         cartQty.innerText = cartqty;
         goodsQty.innerText = cartqty;
-        // goodsnumber.innerText = cartqty;
         cartTotalCost.innerText = carttotalcost.toFixed(2);
-
     });
 });

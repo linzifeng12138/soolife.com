@@ -34,6 +34,7 @@ require(['config'],function(){
             var category = this.getAttribute("data-category");
             location.href = "html/list.html"+"?"+"category="+category;
         });
+       
 
         //功能6：开始进行数据生成
         

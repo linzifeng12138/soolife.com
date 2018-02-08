@@ -42,11 +42,11 @@ $king: rgb(246,171,0) !global;
 #maingoods_list .pagehere p:first-child{width:88px;height:33px;float:left;font-size:12px;line-height:33px;}
 #maingoods_list .pagehere p:last-child{width:88px;height:33px;float:left;font-size:12px;line-height:33px;}
 
-
+/*分页的页码样式*/
 #real_page{width:100%;height:80px;background:#efefef;}
 #real_page .container{height:80px;background:white;}
-#real_page p{float:left;width:150px;height:65px;font-size:13px;text-align:center;line-height:65px;background: #ccc;}
-#real_page .pagenum{padding-top:16px;}
+#real_page p{float:left;width:150px;height:80px;font-size:13px;text-align:center;line-height:80px;}
+#real_page .pagenum{padding-top:24px;}
 #real_page .pagenum span{display:inline-block;margin:5px;width:40px;line-height:1.8;text-align: center;
     background-color:#dfdfdf;color:#666;
     font-size:12px;cursor:pointer;}

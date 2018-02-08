@@ -207,6 +207,7 @@
   line-height: 33px;
 }
 
+/*分页的页码样式*/
 #real_page {
   width: 100%;
   height: 80px;
@@ -221,15 +222,14 @@
 #real_page p {
   float: left;
   width: 150px;
-  height: 65px;
+  height: 80px;
   font-size: 13px;
   text-align: center;
-  line-height: 65px;
-  background: #ccc;
+  line-height: 80px;
 }
 
 #real_page .pagenum {
-  padding-top: 16px;
+  padding-top: 24px;
 }
 
 #real_page .pagenum span {
