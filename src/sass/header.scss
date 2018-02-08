@@ -68,7 +68,7 @@ overflow:hidden;}
 
 #asider .contentlist{float:left;width:270px;height:700px;display:none;
     background:rgba(255,255,255,0.9);}
-#asider .contentlist h3{margin-left:5px;margin-right:5px;width:260px;height:40px;border-bottom:2px solid $skyblue;color:black;line-height:40px;text-align:center;font-size:13px;}
+#asider .contentlist h3{margin-left:5px;margin-right:5px;width:260px;height:40px;border-bottom:2px solid $skyblue;color:$skyblue;font-size:14px;font-weight:bold;line-height:40px;text-align:center;font-size:13px;}
 
 #asider .contentlist ul{overflow:auto;min-height:130px;width:270px;height:550px;margin-top:6px;}
 #asider .contentlist ul li{width:250px;height:115px;margin-bottom:5px;background:#ccc;padding-top:10px;padding-left:10px;margin-left:5px;}

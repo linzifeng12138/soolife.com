@@ -135,7 +135,7 @@ require(['config'],function(){
            
             titleplace.innerText = '';
             titleplace.innerText = targetitem.title;
-            
+
             // 商品详情切换页的信息
             good_name.innerText = '';
             good_name.innerText = targetitem.title;
@@ -169,6 +169,7 @@ require(['config'],function(){
                 success:function(res){
                     var currentgoods = JSON.parse(res);
                     console.log(currentgoods);
+                    // 利用封装函数显示信息到页面
                     detailload(currentgoods);
                     // 请求对应id商品信息和加载到页面功能结束
                     
@@ -196,7 +197,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
 
                         // 购物车飞入动画效果，
                         // 复制目标图片

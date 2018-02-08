@@ -34,9 +34,52 @@ require(['config'],function(){
             var category = this.getAttribute("data-category");
             location.href = "html/list.html"+"?"+"category="+category;
         });
+
+        //功能6、让页面右侧的小购物车加载购物车cookie里面的商品
+        // 注意一定要将carlist定义成一个全局变量
+        var carlist = [];
+        var cookies = document.cookie; 
+        if(cookies.length){
+            cookies = cookies.split('; ');
+            cookies.forEach(function(item){
+                var arr = item.split('=');
+                if(arr[0] === 'carlist'){
+                    carlist = JSON.parse(arr[1]);
+                }
+            })
+        };
+        var smallcart = document.querySelector('.contentlist .smallcart');
+        var cartQty = document.querySelector('.contentlist .cartQty');
+        var cartTotalCost =document.querySelector('.contentlist .cartTotalCost');
+        var goodsQty = document.querySelector('#asider .goodsqty');console.log(goodsQty);
+        var cartqty = 0;
+        var carttotalcost = 0;
+        
+        var smallul = document.createElement('ul');
+        smallul.innerHTML = carlist.map(function(item){
+            cartqty += item.qty;
+            carttotalcost += item.ourprice*item.qty;
+            return`
+                <li data-guid="${item.id}">
+                    <a href="html/goods.html?id=${item.id}">
+                        <img src="${item.img}" alt="" />
+                    </a>
+                    <p class="title">${item.title}</p>
+                    <p class="shopprice">￥
+                        <span class="oprice">${item.ourprice}</span>
+                          X
+                        <span class="itemqty">${item.qty}</span>
+                    </p>
+                </li>
+            `
+        }).join('');
+        smallcart.appendChild(smallul);
+        cartQty.innerText = cartqty;
+        goodsQty.innerText = cartqty;
+        cartTotalCost.innerText = carttotalcost.toFixed(2);
        
 
-        //功能6：开始进行数据生成
+        //功能7：开始进行数据生成
         
         // 1f服饰衣帽
         var $clothes = $('#clothes .data_clothes');

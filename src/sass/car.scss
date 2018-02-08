@@ -63,7 +63,7 @@ body{background:$mainbg;}
 /*图片的样式*/
 #maincar ul li .maincontent img{width:90px;height:90px;margin-left:23px;}
 /*产品信息栏*/
-#maincar ul li .maincontent .information{display:inline-block;width:380px;height:100px;padding-top:35px;padding-left:23px;padding-right:130px;line-height:16px;font-size:13px;vertical-align:top;}
+#maincar ul li .maincontent .information{display:inline-block;width:380px;height:100px;padding-top:35px;padding-left:23px;padding-right:130px;line-height:16px;font-size:13px;font-weight:bold;color:$skyblue;vertical-align:top;}
 /*产品价格*/
 #maincar ul li .maincontent .price{display:inline-block;width:135px;height:100px;line-height:100px;font-size:12px;text-align:center;vertical-align:top;margin-right:60px;color:#CC0000;font-weight:bold;}
 /*星币数量*/
@@ -107,9 +107,9 @@ body{background:$mainbg;}
 #guess .datafocus ul{width:12000px;position:absolute;left:0px;top:0px;}
 #guess .datafocus ul li{float:left;width:270px;height:298px;margin-right:30px;padding-left:20px;padding-right:10px;background:$mainbg;border:1px solid #ccc;}
 #guess .datafocus ul li:last-child{margin-right:0px;}
-#guess .datafocus ul li img{width:160px;height:160px;margin-left:35px;margin-top:20px;}
-#guess .datafocus ul li h4{font-size:13px;line-height:19px;}
-#guess .datafocus ul li h5{line-height:34px;}
+#guess .datafocus ul li img{width:160px;height:160px;margin-left:35px;margin-top:20px;margin-bottom:33px;}
+#guess .datafocus ul li h4{text-align:center;color:$king;font-size:13px;line-height:19px;}
+#guess .datafocus ul li h5{text-align:center;color:$skyblue;line-height:34px;}
 #guess .datafocus ul li button{margin-left:33px;}
 
 #guess .datafocus i{display:block;cursor:pointer;width:26px;height:62px;}

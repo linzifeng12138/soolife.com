@@ -221,6 +221,8 @@ body {
   padding-right: 130px;
   line-height: 16px;
   font-size: 13px;
+  font-weight: bold;
+  color: #33a1db;
   vertical-align: top;
 }
 
@@ -456,14 +458,19 @@ body {
   height: 160px;
   margin-left: 35px;
   margin-top: 20px;
+  margin-bottom: 33px;
 }
 
 #guess .datafocus ul li h4 {
+  text-align: center;
+  color: #f6ab00;
   font-size: 13px;
   line-height: 19px;
 }
 
 #guess .datafocus ul li h5 {
+  text-align: center;
+  color: #33a1db;
   line-height: 34px;
 }
 

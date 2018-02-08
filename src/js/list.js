@@ -123,6 +123,7 @@ require(['config'],function(){
                                 ourprice:target.parentNode.children[4].innerText,
                                 listprice:target.parentNode.children[5].innerText,
                                 shopname:target.parentNode.children[6].innerText,
+                                desc:target.parentNode.children[2].innerText,
                                 qty:1
                             }
                             carlist.unshift(goods);
@@ -132,7 +133,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
                     }
                 });
                 // 飞入购物车动画jQuery代码开始
@@ -249,6 +250,7 @@ require(['config'],function(){
                                         ourprice:target.parentNode.children[4].innerText,
                                         listprice:target.parentNode.children[5].innerText,
                                         shopname:target.parentNode.children[6].innerText,
+                                        desc:target.parentNode.children[2].innerText,
                                         qty:1
                                     }
                                     carlist.unshift(goods);
@@ -258,7 +260,7 @@ require(['config'],function(){
                                 }
                                 var now = new Date();
                                 now.setHours(now.getHours()+1);
-                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;
+                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
                             }
                         }); 
                         
@@ -359,6 +361,7 @@ require(['config'],function(){
                                     ourprice:target.parentNode.children[4].innerText,
                                     listprice:target.parentNode.children[5].innerText,
                                     shopname:target.parentNode.children[6].innerText,
+                                    desc:target.parentNode.children[2].innerText,
                                     qty:1
                                 }
                                 carlist.unshift(goods);
@@ -368,7 +371,7 @@ require(['config'],function(){
                             }
                             var now = new Date();
                             now.setHours(now.getHours()+1);
-                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now;                          
+                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';                          
                         }
                     });
 
