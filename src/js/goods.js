@@ -50,7 +50,6 @@ require(['config'],function(){
 
         //5//左右切换小图功能
         var container = document.querySelector('#detail .container');
-        // var focus = document.querySelector('#detail .focus');
         var ullist = document.querySelector('#detail .smallList');
         var length = ullist.children.length;
         var index = 0;
@@ -197,7 +196,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
 
                         // 购物车飞入动画效果，
                         // 复制目标图片

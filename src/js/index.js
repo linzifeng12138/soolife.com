@@ -35,6 +35,11 @@ require(['config'],function(){
             location.href = "html/list.html"+"?"+"category="+category;
         });
 
+        // 功能7 登录成功后显示用户名--cookie
+        var username_after = document.querySelector('.loginafter .username');
+        var loginbefore =  document.querySelector('.loginbefore');
+        var loginafter =  document.querySelector('.loginafter');
+
         //功能6、让页面右侧的小购物车加载购物车cookie里面的商品
         // 注意一定要将carlist定义成一个全局变量
         var carlist = [];
@@ -46,8 +51,24 @@ require(['config'],function(){
                 if(arr[0] === 'carlist'){
                     carlist = JSON.parse(arr[1]);
                 }
+                // 7.1 获取cookie里面的username信息
+                if(arr[0] === 'username'){
+                    username_after.innerText = arr[1];
+                    loginbefore.style.display = 'none';
+                    loginafter.style.display = 'inline-block';
+                }
             })
         };
+        //7.2 点击退出，清空所有cookie信息
+        var clearall = document.getElementById('clearall');
+        clearall.onclick = function(){
+            var now = new Date();
+            now.setDate(now.getDate()-10)
+            document.cookie = 'username=x;expires='+now.toUTCString();
+            loginbefore.style.display = 'inline-block';
+            loginafter.style.display = 'none';
+        }
+
         var smallcart = document.querySelector('.contentlist .smallcart');
         var cartQty = document.querySelector('.contentlist .cartQty');
         var cartTotalCost =document.querySelector('.contentlist .cartTotalCost');

@@ -44,8 +44,8 @@ require(['config'],function(){
                     
                     <div class="maincontent">
                         <input type="checkbox" class="onecheck" checked/>
-
-                        <img src="${item.img}" alt="" />
+                        <a href = "goods.html?id=${item.id}">
+                        <img src="${item.img}" alt="" /></a>
 
                         <span class="information">
                             ${item.title}&nbsp;&nbsp;&nbsp;
@@ -108,7 +108,7 @@ require(['config'],function(){
             }   
         });
 
-        // 页面底部猜你喜欢列表左右切换功能开始
+        // 页面底部猜你喜欢列表开始
         var guessbox = document.querySelector('#guess');
         var index = 0;
         var showWidth = 1200;  

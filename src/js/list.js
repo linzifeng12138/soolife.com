@@ -133,7 +133,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
                     }
                 });
                 // 飞入购物车动画jQuery代码开始
@@ -260,7 +260,7 @@ require(['config'],function(){
                                 }
                                 var now = new Date();
                                 now.setHours(now.getHours()+1);
-                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
+                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
                             }
                         }); 
                         
@@ -371,7 +371,7 @@ require(['config'],function(){
                             }
                             var now = new Date();
                             now.setHours(now.getHours()+1);
-                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';                          
+                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';                          
                         }
                     });
 
