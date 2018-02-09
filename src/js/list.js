@@ -12,10 +12,15 @@ require(['config'],function(){
         //注意list.html的应用路径与首页不同哦
         var $tab = $('#catelist .tablist1');
         $tab.on('click','li',function(){
-            console.log(this);
+            // console.log(this);
             var category = this.getAttribute("data-category");
             location.href = "list.html"+"?"+"category="+category;
         });
+        // 功能8 登录成功后显示用户名--cookie
+        var username_after = document.querySelector('.loginafter .username');
+        var loginbefore =  document.querySelector('.loginbefore');
+        var loginafter =  document.querySelector('.loginafter');
+
         // 功能5 购物车功能，1、新建一个空的数组，用于保存购物车中的商品信息
         // 注意一定要将carlist定义成一个全局变量
         var carlist = [];
@@ -27,8 +32,23 @@ require(['config'],function(){
                 if(arr[0] === 'carlist'){
                     carlist = JSON.parse(arr[1]);
                 }
+                 // 8.2 获取cookie里面的username信息
+                if(arr[0] === 'username'){
+                    username_after.innerText = arr[1];
+                    loginbefore.style.display = 'none';
+                    loginafter.style.display = 'inline-block';
+                }
             })
         };
+        //8.3 点击退出，清空用户cookie信息
+        var clearall = document.getElementById('clearall');
+        clearall.onclick = function(){
+            var now = new Date();
+            now.setDate(now.getDate()-10)
+            document.cookie = 'username=x;expires='+now.toUTCString() + ';path=/';
+            loginbefore.style.display = 'inline-block';
+            loginafter.style.display = 'none';
+        }
 
         // 功能4：接收来自首页和本列表页面的category信息，生成对应类别的商品列表，
         // 且实现点击对应的图片查看商品信息和加入购物车功能
@@ -133,7 +153,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
                     }
                 });
                 // 飞入购物车动画jQuery代码开始
@@ -260,7 +280,7 @@ require(['config'],function(){
                                 }
                                 var now = new Date();
                                 now.setHours(now.getHours()+1);
-                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
+                                document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
                             }
                         }); 
                         
@@ -371,7 +391,7 @@ require(['config'],function(){
                             }
                             var now = new Date();
                             now.setHours(now.getHours()+1);
-                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';                          
+                            document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';                          
                         }
                     });
 

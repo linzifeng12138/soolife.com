@@ -59,16 +59,17 @@ require(['config'],function(){
                 }
             })
         };
-        //7.2 点击退出，清空所有cookie信息
+        //7.2 点击退出，清空用户cookie信息
         var clearall = document.getElementById('clearall');
         clearall.onclick = function(){
             var now = new Date();
             now.setDate(now.getDate()-10)
-            document.cookie = 'username=x;expires='+now.toUTCString();
+            document.cookie = 'username=x;expires='+now.toUTCString() + ';path=/';
             loginbefore.style.display = 'inline-block';
             loginafter.style.display = 'none';
         }
 
+        // 功能6-2、让页面右侧的小购物车加载购物车cookie里面的商品
         var smallcart = document.querySelector('.contentlist .smallcart');
         var cartQty = document.querySelector('.contentlist .cartQty');
         var cartTotalCost =document.querySelector('.contentlist .cartTotalCost');

@@ -1,6 +1,7 @@
 require(['config'],function(){
     require(['jquery','common'],function($,com){
        console.log(666);
+       // 获取记住我 表单元素
        var cookie = document.getElementById('cookie');
 
        $('.loginbtn').on('click',function(){
@@ -14,7 +15,7 @@ require(['config'],function(){
                 },
                 success:function(data){
                     if(data === 'fail'){
-                        alert('不存在该用户，请重试！');
+                        alert('用户名或密码错误，请重试！');
                         location=location;//刷新当前页面，避免重复注册时的信息bug
                         return false;
                     }

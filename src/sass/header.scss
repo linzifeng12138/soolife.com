@@ -52,32 +52,38 @@ color:white;position:absolute;right:10px;top:33px;}
 
 /*页面最右端功能区代码开始*/
 .onclick{background:$pink;}
-#asider{position:fixed;right:0px;top:0px;z-index:5;height:700px;
+#asider{position:fixed;right:0px;top:0px;z-index:255;height:700px;
 overflow:hidden;}
 
-#asider .functionlist{float:right;width:30px;height:700px;
+#asider .functionlist{position:relative;float:right;width:30px;height:700px;
     background:$skyblue;padding-top:180px;}
 #asider .functionlist .shopcart{width:30px;height:140px;font-size:13px;text-align:center;padding-top:33px;border-top:1px solid white;border-bottom:1px solid white;}
 #asider .functionlist .shopcart:hover{background:$pink;}
+
 #asider .functionlist .shopcart .shiftbtn{padding-left:10px;padding-right:10px;color:white;cursor:pointer;}
 #asider .functionlist .shopcart .goodsqty{
     display:block;width:25px;height:25px;border-radius:50%;
     text-align:center;line-height:25px;color:white;
     background:$pink;
     margin-left:3px;margin-top:6px;}
+#asider .functionlist .backtopbtn{display:block;width:22px;height:29px;background:url("../img/lzfwww.png") no-repeat;background-position:-269px -72px;position:absolute;left:4px;bottom:50px;}
+
+
 
 #asider .contentlist{float:left;width:270px;height:700px;display:none;
     background:rgba(255,255,255,0.9);}
 #asider .contentlist h3{margin-left:5px;margin-right:5px;width:260px;height:40px;border-bottom:2px solid $skyblue;color:$skyblue;font-size:14px;font-weight:bold;line-height:40px;text-align:center;font-size:13px;}
 
 #asider .contentlist ul{overflow:auto;min-height:130px;width:270px;height:550px;margin-top:6px;}
-#asider .contentlist ul li{width:250px;height:115px;margin-bottom:5px;background:#ccc;padding-top:10px;padding-left:10px;margin-left:5px;}
+#asider .contentlist ul li{width:250px;height:115px;margin-bottom:5px;background:#efefef;padding-top:10px;padding-left:10px;margin-left:5px;}
 #asider .contentlist ul li img{float:left;width:85px;height:85px;}
 #asider .contentlist ul li .title{float:left;width:130px;height:40px;line-height:18px;padding-left:13px;font-size:12px;}
 #asider .contentlist ul li .shopprice{float:left;width:150px;height:40px;line-height:40px;font-size:12px;padding-left:12px;}
 
 #asider .contentlist .shopcount{padding-left:10px;width:250px;height:40px;line-height:40px;font-size:12px;color:$skyblue;margin-top:5px;}
 #asider .contentlist .shopcount .heji{font-size:18px;font-weight:bold;color:$skyblue;margin-left:33px;}
+
+
 
 #asider .contentlist .checkout{display:block;margin:5px;width:260px;height:35px;background:$skyblue;line-height:35px;text-align:center;color:white;font-weight:bold;}
 /*页面最右端黑色功能区代码结束*/

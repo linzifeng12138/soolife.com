@@ -34,7 +34,8 @@ require(['config'],function(){
         $('#detail .biglist ').lzfzoom({
             position:'right'
         });
-        $('#detail .smallList img').on('mouseenter',function(){
+        //需要点击小图才能切换显示的图片
+        $('#detail .smallList img').on('click',function(){
             $('#detail .biglist img').attr({
                 'src':this.src,
                 'data-big':$(this).attr('data-big') || this.src,
@@ -44,7 +45,7 @@ require(['config'],function(){
         // 4-2-1:默认第一张高亮
         $('#detail .smallList').find('li.targetli img').addClass('border');
         // 4-2-2:鼠标上移才会高亮
-        $('#detail .smallList').on('mouseenter','li',function(){
+        $('#detail .smallList').on('click','li',function(){
                 $(this).find('img').addClass('border').closest('li').siblings().find('img').removeClass('border');
         });
 
@@ -53,7 +54,6 @@ require(['config'],function(){
         var ullist = document.querySelector('#detail .smallList');
         var length = ullist.children.length;
         var index = 0;
-        // var showWidth = focus.offsetWidth;
         var showWidth = 350;
         function display(){
             if(index > Math.ceil(length/5)-1){
@@ -74,6 +74,11 @@ require(['config'],function(){
         });
         //5//左右切换小图功能代码结束
         
+        // 功能8-1 显示登录用户信息
+        var username_after = document.querySelector('.loginafter .username');
+        var loginbefore =  document.querySelector('.loginbefore');
+        var loginafter =  document.querySelector('.loginafter');
+
         //功能6 根据传过来的id加载指定的产品信息和加入购物车
         //实现购物车功能第一步
         var goods = {};//创建一个盛放当前商品信息的对象
@@ -85,8 +90,23 @@ require(['config'],function(){
                 if(arr[0]==='carlist'){
                     carlist = JSON.parse(arr[1]);
                 }
+                // 8.1 获取cookie里面的username信息
+                if(arr[0] === 'username'){
+                    username_after.innerText = arr[1];
+                    loginbefore.style.display = 'none';
+                    loginafter.style.display = 'inline-block';
+                }
             });
         }; 
+        //8.2 点击退出，清空用户cookie信息
+        var clearall = document.getElementById('clearall');
+        clearall.onclick = function(){
+            var now = new Date();
+            now.setDate(now.getDate()-10)
+            document.cookie = 'username=x;expires='+now.toUTCString() + ';path=/';
+            loginbefore.style.display = 'inline-block';
+            loginafter.style.display = 'none';
+        }
 
         //加载数据第一步 获取id
         var params = location.search;
@@ -106,6 +126,9 @@ require(['config'],function(){
         var ourprice       = document.querySelector('#detail .ourprice');
         var listprice      = document.querySelector('#detail .listprice');
         var shop_name      = document.querySelector('#detail .shop_name');
+        //页面顶部的路径的内容
+        var top_shopname  = document.querySelector('.top_shopname');
+        var top_goodsname = document.querySelector('.top_goodsname');
         // 商品详情切换的信息
         var good_name = document.querySelector('.good_name');
         var good_brand = document.querySelector('.good_brand');
@@ -134,6 +157,8 @@ require(['config'],function(){
            
             titleplace.innerText = '';
             titleplace.innerText = targetitem.title;
+            top_goodsname.innerText = '';
+            top_goodsname.innerText = targetitem.title;
 
             // 商品详情切换页的信息
             good_name.innerText = '';
@@ -151,7 +176,9 @@ require(['config'],function(){
             listprice.innerText = targetitem.listprice;
             
             shop_name.innerText = '';
-            shop_name.innerText = targetitem.shopname;        
+            shop_name.innerText = targetitem.shopname; 
+            top_shopname.innerText = '';
+            top_shopname.innerText = targetitem.shopname;        
             //给加入购物车按钮添加自定义属性data-id，就是为了下面判断加入购物车的商品计数
             addcar.dataset.id = '';
             addcar.dataset.id = targetitem.id;
@@ -196,7 +223,7 @@ require(['config'],function(){
                         }
                         var now = new Date();
                         now.setHours(now.getHours()+1);
-                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString() + ';path=/';
+                        document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
 
                         // 购物车飞入动画效果，
                         // 复制目标图片

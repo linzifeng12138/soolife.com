@@ -211,12 +211,13 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  z-index: 5;
+  z-index: 255;
   height: 700px;
   overflow: hidden;
 }
 
 #asider .functionlist {
+  position: relative;
   float: right;
   width: 30px;
   height: 700px;
@@ -258,6 +259,17 @@
   margin-top: 6px;
 }
 
+#asider .functionlist .backtopbtn {
+  display: block;
+  width: 22px;
+  height: 29px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -269px -72px;
+  position: absolute;
+  left: 4px;
+  bottom: 50px;
+}
+
 #asider .contentlist {
   float: left;
   width: 270px;
@@ -292,7 +304,7 @@
   width: 250px;
   height: 115px;
   margin-bottom: 5px;
-  background: #ccc;
+  background: #efefef;
   padding-top: 10px;
   padding-left: 10px;
   margin-left: 5px;

@@ -1,6 +1,11 @@
 require(['config'],function(){
     require(['jquery','common'],function($,com){
         // 显示购物车的信息到HTML结构里面
+        // 功能 登录成功后显示用户名--cookie
+        var username_after = document.querySelector('.loginafter .username');
+        var loginbefore =  document.querySelector('.loginbefore');
+        var loginafter =  document.querySelector('.loginafter');
+
         //先设置一个空的数组，作用是读取cookie
         var carlist =[];
         var cookies = document.cookie.split('; ');
@@ -10,9 +15,24 @@ require(['config'],function(){
                 if(arr[0]==='carlist'){
                     carlist = JSON.parse(arr[1]);
                 }
+                // 获取cookie里面的username信息
+                if(arr[0] === 'username'){
+                    username_after.innerText = arr[1];
+                    loginbefore.style.display = 'none';
+                    loginafter.style.display = 'inline-block';
+                }
             });
         }
-        console.log(carlist);
+        //点击退出，清空用户的cookie信息
+        var clearall = document.getElementById('clearall');
+        clearall.onclick = function(){
+            var now = new Date();
+            now.setDate(now.getDate()-10)
+            document.cookie = 'username=x;expires='+now.toUTCString() + ';path=/';
+            loginbefore.style.display = 'inline-block';
+            loginafter.style.display = 'none';
+        }
+
         //页面顶部黄色显示区域的产品数量
         var totalQty  = document.querySelector('.totalnum .totalqty');
 

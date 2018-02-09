@@ -17,6 +17,9 @@ $mainpink:#FD5A85 !global;
 #loginbody .mainbody .otherway i{display:inline-block;width:23px;height:23px;background:url("../img/lzfwww.png" )no-repeat;background-position:-198px -35px;position:absolute;left:30px;top:25px;}
 #loginbody .mainbody .otherway i:last-child{display:inline-block;width:20px;height:20px;background:url("../img/lzfwww.png" )no-repeat;background-position:-232px -37px;position:absolute;left:70px;top:25px;}
 #loginbody .mainbody input{border:1px solid #ccc;}
-#footer{width:100%;}
 
+#loginbody .mainbody .userlogo{display:block;width:29px;height:26px;background:url("../img/lzfwww.png") no-repeat;background-position:-310px -72px;position:absolute;left:26px;top:75px;}
+#loginbody .mainbody .passlogo{display:block;width:24px;height:24px;background:url("../img/lzfwww.png") no-repeat;background-position:-356px -72px;position:absolute;left:28px;top:135px;}
+
+#footer{width:100%;}
 #footer .container{height:376px;background:url("../img/footer.png") no-repeat;}

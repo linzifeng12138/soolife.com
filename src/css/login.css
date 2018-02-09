@@ -110,6 +110,28 @@
   border: 1px solid #ccc;
 }
 
+#loginbody .mainbody .userlogo {
+  display: block;
+  width: 29px;
+  height: 26px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -310px -72px;
+  position: absolute;
+  left: 26px;
+  top: 75px;
+}
+
+#loginbody .mainbody .passlogo {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/lzfwww.png") no-repeat;
+  background-position: -356px -72px;
+  position: absolute;
+  left: 28px;
+  top: 135px;
+}
+
 #footer {
   width: 100%;
 }

@@ -5,11 +5,6 @@
     <title>商品列表 | 如此生活</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../css/list.css" />
-
-   <!--  <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <script type="text/javascript" src="../js/list.js"></script> -->
-    
     <script type="text/javascript" src="../js/require.js" data-main="../js/list"></script>
 
 </head>
@@ -17,8 +12,16 @@
     
     <div id="topnav">
         <div class="container">
-            <span class="username">Hi, 欢迎来到如此生活</span>
-            <a href="login.html" class="loginhere">登录</a>
+            <span class="loginbefore">
+                <span class="username">Hi, 欢迎来到如此生活</span>
+                <a href="login.html" class="loginhere">登录</a>
+            </span>
+            <span class="loginafter" style="display:none;">
+                <span style="font-size:12px;">Hello,</span>
+                <span class="username">数据生成</span>
+                <a href="javascript:;" class="loginhere" id="clearall">退出</a>
+            </span>
+
             <a href="reg.html" class="reghere">免费注册</a>
             <a href="#" class="wx smalllogo"></a>
             <a href="#" class="wb smalllogo"></a>
@@ -41,6 +44,7 @@
                <h3 class="shiftbtn">购物车</h3> 
                <span class="goodsqty">0</span>
             </div>
+            <a href="javascript:;" class="backtopbtn"></a>
         </div>
 
         <div class="contentlist">
