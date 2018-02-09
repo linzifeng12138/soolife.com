@@ -16,7 +16,7 @@ require(['config'],function(){
             var category = this.getAttribute("data-category");
             location.href = "list.html"+"?"+"category="+category;
         });
-        // 功能8 登录成功后显示用户名--cookie
+        // 功能4 登录成功后显示用户名--cookie
         var username_after = document.querySelector('.loginafter .username');
         var loginbefore =  document.querySelector('.loginbefore');
         var loginafter =  document.querySelector('.loginafter');
@@ -32,7 +32,7 @@ require(['config'],function(){
                 if(arr[0] === 'carlist'){
                     carlist = JSON.parse(arr[1]);
                 }
-                 // 8.2 获取cookie里面的username信息
+                 // 4.2 获取cookie里面的username信息
                 if(arr[0] === 'username'){
                     username_after.innerText = arr[1];
                     loginbefore.style.display = 'none';
@@ -40,7 +40,7 @@ require(['config'],function(){
                 }
             })
         };
-        //8.3 点击退出，清空用户cookie信息
+        //4.3 点击退出，清空用户cookie信息
         var clearall = document.getElementById('clearall');
         clearall.onclick = function(){
             var now = new Date();
@@ -50,7 +50,7 @@ require(['config'],function(){
             loginafter.style.display = 'none';
         }
 
-        // 功能4：接收来自首页和本列表页面的category信息，生成对应类别的商品列表，
+        // 功能6：接收来自首页和本列表页面的category信息，生成对应类别的商品列表，
         // 且实现点击对应的图片查看商品信息和加入购物车功能
         var $datalist = $('#maingoods_list .li_style0');
          // 获取盛放某个产品类别的容器元素
@@ -67,6 +67,8 @@ require(['config'],function(){
         var category = arr[1];//从首页或本页面传来的category数据
         var pageNo = 1; //页数
         var qty = 20;//每页显示数量  
+
+        // 6-1 默认加载当前产品类别数据
         $.ajax({
             type:"post",
             url:'../api/list.php',
@@ -76,7 +78,9 @@ require(['config'],function(){
                 qty:qty
             },
             success:function(res){
-                var res_cate = JSON.parse(res);console.log(res_cate);
+                var res_cate = JSON.parse(res);
+                console.log(res_cate);
+
                 var ul = document.createElement('ul');
 
                 //1、利用自行封装的函数生成HTML结构：
@@ -106,60 +110,65 @@ require(['config'],function(){
 
                 //3、实现点击加入购物车添加商品信息到cookie功能--自行定义的封装函数
                 addCart(ul);
+
+                // 4、分页加载当前数据组---未按照价格排序
+                var realurl = '../api/list.php';
+                pageShow(realurl);
             }
         });
 
-        // 实现分页加载ajax数据功能
-        page.onclick = function(e){
-            if(e.target.tagName.toLowerCase()==='span'){
-                pageNo = e.target.innerText*1;
-                $.ajax({
-                    type:"post",
-                    url:'../api/list.php',
-                    data:{
-                        category:category,
-                        pageNo:pageNo,
-                        qty:qty
-                    },
-                    success:function(res){
-                        // console.log(res);
-                        // 注意，jQuery返回的数据还是需要进行json转换才可以使用哦
-                        var res_cate = JSON.parse(res);
-                        console.log(res_cate);
-                        var ul = document.createElement('ul');
-                        ul.classList.add('clearfix');
+        //功能7 实现当前分类的产品列表的价格排序功能----页面一旦刷新就会取消排序效果
+        $('.price_order').on('click',function(){
+            $.ajax({
+                type:"post",
+                url:'../api/price_order.php',
+                data:{
+                    category:category,
+                    pageNo:pageNo,
+                    qty:qty
+                },
+                success:function(res){
+                    var res_order = JSON.parse(res);
+                    console.log(res_order);
 
-                        //1、利用自行封装的函数生成HTML结构：
-                        htmlWrite(ul,res_cate,$datalist);
+                    var ul = document.createElement('ul');
+                    //1、利用自行封装的函数生成HTML结构：
+                    htmlWrite(ul,res_order,$datalist);
 
-                        // 2、生成分页
-                        page.innerText = '';
-                        //显示当前类别的所有商品总数
-                        total.innerText = res_cate.total;
-                        //显示列表页顶部信息
-                        total_num.innerText = res_cate.total;
-                        single_page.innerText = '';
-                        single_page.innerText = pageNo;
-                        //加载数据前必须清空前面的数据
-                        var pageQty = Math.ceil(res_cate.total/res_cate.qty);
-                        for(var i=1;i<=pageQty;i++){
-                            var span = document.createElement('span');
-                            span.innerHTML = i;
+                    // 2、生成分页
+                    page.innerText = '';
+                    //显示当前类别的所有商品总数
+                    total.innerText = res_order.total;
+                    //显示列表页顶部信息
+                    total_num.innerText = res_order.total;
+                    single_page.innerText = '';
+                    single_page.innerText = pageNo;
 
-                            if(i === pageNo){
-                                span.className = 'active';
-                            }
-                            page.appendChild(span);
-                        }; 
+                    //加载数据前必须清空前面的数据
+                    var pageQty = Math.ceil(res_order.total/res_order.qty);
+                    all_page.innerText = Math.ceil(res_order.total/res_order.qty);
+                    for(var i=1;i<=pageQty;i++){
+                        var span = document.createElement('span');
+                        span.innerHTML = i;
 
-                        //点击加入购物车添加商品信息到cookie
-                        addCart(ul);
-                    }
-                });
-            };
-        };
-        
-        // 功能6 热销产品的ajax加载和添加到购物车功能     
+                        if(i === pageNo){
+                            span.className = 'active';
+                        }
+                        page.appendChild(span);
+                    }; 
+
+                    //3、实现点击加入购物车添加商品信息到cookie功能--自行定义的封装函数
+                    addCart(ul);
+
+                    // 4、分页加载当前数据组---按照价格排序之后
+                    var realurl = '../api/price_order.php';
+                    pageShow(realurl);
+                }
+            })
+        });
+
+        // 功能8 热销产品的ajax加载和添加到购物车功能     
+        // 
         // 第一步获取容器
         var $hotgoods = $('#hotsell .li_style0'); 
         // 第二步：避免全局污染利用匿名函数发起对应类别的ajax请求in jQuery
@@ -177,7 +186,7 @@ require(['config'],function(){
                 },
                 success:function(res){
                     var res_hot = JSON.parse(res);
-                    console.log(res_hot);
+                    // console.log(res_hot);
                     var ul = document.createElement('ul');
 
                     //1、利用自行封装的函数生成HTML结构：
@@ -189,7 +198,7 @@ require(['config'],function(){
             });   
         }) ();
         
-        // 功能7 飞入购物车动画jQuery代码开始-----要求绑定在最高级的父级元素，这里我选择的是body标签
+        // 功能8 飞入购物车动画jQuery代码开始-----要求绑定在最高级的父级元素，这里我选择的是body标签
         // 还有要求要求css和HTML结构必须一致，类名等一样，否则效果无法实现
         $('body').on('click','.addcar_btn',function(){
             //获取事件源对象.addcar按钮DOM节点最近的li父级元素$li
@@ -218,7 +227,7 @@ require(['config'],function(){
             });
         });
 
-        //功能8、让页面右侧的小购物车加载购物车cookie里面的商品
+        //功能9、让页面右侧的小购物车加载购物车cookie里面的商品
         var smallcart = document.querySelector('.contentlist .smallcart');
         var cartQty = document.querySelector('.contentlist .cartQty');
         var cartTotalCost =document.querySelector('.contentlist .cartTotalCost');
@@ -265,7 +274,7 @@ require(['config'],function(){
                         <p class="listprice">${item.listprice}</p>
                         <h5>${item.shopname}</h5>
                         <a href="javascript:;" class="addcar_btn"><i></i>加入购物车</a>
-                        <a href="javascript:;" class="focuson"><span></span>关注商品</a>
+                        <a href="javascript:;" class="focuson"><span></span>关注该商品</a>
                     </li>
                     `
             }).join('');
@@ -316,6 +325,58 @@ require(['config'],function(){
                     document.cookie =  'carlist=' + JSON.stringify(carlist) + ';expires=' + now + ';path=/';
                 }
             });
-        };       
+        };  
+
+        //解决价格排序之后分页加载当前排序的顺序问题---函数封装一个分页函数，以URL作为区分条件--刷新变回默认未排序状态
+        function pageShow(realurl){
+            page.onclick = function(e){
+                if(e.target.tagName.toLowerCase()==='span'){
+                    pageNo = e.target.innerText*1;
+                    $.ajax({
+                        type:"post",
+                        url:realurl,
+                        data:{
+                            category:category,
+                            pageNo:pageNo,
+                            qty:qty
+                        },
+                        success:function(res){
+                            // console.log(res);
+                            // 注意，jQuery返回的数据还是需要进行json转换才可以使用哦
+                            var res = JSON.parse(res);
+                            // console.log(res_cate);
+                            var ul = document.createElement('ul');
+                            ul.classList.add('clearfix');
+
+                            //1、利用自行封装的函数生成HTML结构：
+                            htmlWrite(ul,res,$datalist);
+
+                            // 2、生成分页
+                            page.innerText = '';
+                            //显示当前类别的所有商品总数
+                            total.innerText = res.total;
+                            //显示列表页顶部信息
+                            total_num.innerText = res.total;
+                            single_page.innerText = '';
+                            single_page.innerText = pageNo;
+                            //加载数据前必须清空前面的数据
+                            var pageQty = Math.ceil(res.total/res.qty);
+                            for(var i=1;i<=pageQty;i++){
+                                var span = document.createElement('span');
+                                span.innerHTML = i;
+
+                                if(i === pageNo){
+                                    span.className = 'active';
+                                }
+                                page.appendChild(span);
+                            }; 
+
+                            //3、点击加入购物车添加商品信息到cookie
+                            addCart(ul);
+                        }
+                    });
+                };
+            };
+        };    
     });
 });
